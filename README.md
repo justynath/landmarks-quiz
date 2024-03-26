@@ -1,39 +1,159 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Landmarks Quiz
 
-Welcome,
-
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
-
-## Codeanywhere Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Overview
 
 ---
 
-Happy coding!
+## Planning
+
+### Aim
+
+### Targeted Audience
+
+### User Stories
+
+---
+
+## UX
+
+### Strategy
+-
+
+### Scope
+-
+
+### Structure
+-
+
+### Skeleton
+-
+
+### Surface
+
+#### Colour Palette
+
+#### Images
+
+---
+
+## Technologies
+1. HTML - To create the three pages: home, current reading and sign up
+2. CSS - To create a nice, standout front-end and to give a great user experience
+3. JavaScript
+4. Balsamiq - To create a wireframe
+
+---
+
+## Features 
+
+### Navbar 
+
+### The Footer
+
+---
+
+## Future Features
+While the current version of the project is fully functional, I have some exciting features planned for future updates. Here are a few ideas that I didn't have time to implement in this release:
+
+1. **Sugestion**:
+   - details
+
+---
+
+## Testing
+
+### Features Testing
+
+|  Feature |  Action | Effect |
+|---|---|---|
+|Logo|Click|Brings back to Home page|
+||||
+
+### Browsers 
+
+**Supported Browsers and Devices**
+My web application is tested and supported on the following browsers and devices:
+- Google Chrome (latest version)
+- Safari (latest version)
+
+**Responsiveness Testing**
+I conduct manual responsiveness testing on Chrome and Safari to ensure a seamless user experience.
+
+**Test Results**
+
+| Device/Screen Size  | Chrome Performance | Safari Performance |
+|----------------------|--------------------|---------------------|
+| Desktop (2560x1440) | no issues | no issues |
+| Laptop (1366x768)   | no issues | no issues |
+| Tablet (iPad)       | no issues | no issues |
+| Mobile (iPhone 12pro)   | no issues | as Chrome |
+
+**Known Issues**
+
+### Lighthouse
+
+**Introduction**
+This report presents the results of Lighthouse testing conducted to assess the performance, accessibility, best practices, SEO, and PWA compliance of Landmarks.
+
+**Test Execution**
+Lighthouse tests were executed using the Google Chrome browser's DevTools.
+
+**Test Metrics**
+
+#### index.html
+
+#### current-reading.html
+
+#### signup.html
+
+### Bugs Resolved
+
+**Introduction**
+This section provides a summary of bugs that have been identified, reported, and subsequently resolved in Landmarks.
+
+**Bug Tracking**
+Below is a summary of resolved bugs:
+
+| Bug ID | Bug Description | Status |
+|--------|-----------------|--------|
+| #001   | description | Resolved |
+| #002   | description | Resolved |
+| #003   | description | Resolved |
+
+**Bug Details**
+Here are the details of the resolved bugs:
+
+**Bug #001**
+- **Description**: 
+- **Resolution**: 
+- **Impact**: 
+
+### Validator Testing 
+
+**HTML**
+Code has been validated with the official W3C validator.
+
+index.html
+
+**CSS**
+Code has been validated with the official (Jigsaw) validator
+
+---
+
+## Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy were as follow: 
+  - In the GitHub repository I navigated to the Settings tab 
+  - From the source section drop-down menu, I selected the Main Branch
+  - Once the main branch was selected, the page automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
+---
+
+## Credits 
+
+### Content 
+
+### Media
+
+### Anknowledgements
+
