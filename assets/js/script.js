@@ -1,7 +1,10 @@
+let bigBen = new Image();
+bigBen.src = "assets/images/big-ben.png";
+
 const questions = [
     {
-        image: "assets/images/big-ben.png",
-        guestion: "Where can you see this building?",
+        image: bigBen,
+        guestion: "Where can you find this building?",
         answers: [
             { text: "Berlin", correct: false},
             { text: "Manchester", correct: false},
@@ -51,9 +54,58 @@ const questions = [
     },
 ];
 
+const imageElement = document.getElementById("landmark-image");
 const questionElement = document.getElementById("question");
 const answerOptions = document.getElementById("answer-options");
 const nextButton = document.getElementById("next-button");
 
-let currentQuestionInddex = 0;
+let currentQuestionIndex = 0;
 let score = 0;
+
+/**
+ * Function to start the quiz
+ */
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    displayQuestion();
+}
+
+/**
+ * Function to display a question: 
+ * clear the previous question, 
+ * display question text with question number, 
+ * show four answer options
+ */
+
+function displayQuestion() {
+    clearPrevious();
+
+    let currentImage = image[currentQuestionIndex];
+    imageElement.innerHTML = currentImage.image;
+
+    let currentQuestion = question[currentQuestionIndex];
+    let questionNumber = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
+
+    currentQuestion.answers.forEach(answer => {
+        const newButton = document.createElement("newButton")
+        newButton.innerHTML = answer.text;
+        newButton.classList.add("button");
+        answerOptions.appendChild(newButton); 
+    });
+}
+
+/**
+ * Function to clear the previous question
+ */
+function clearPrevious() {
+    nextButton.style.display = "none";
+    while(answerOptions.firstChild) {
+        answerOptions.removeChild(answerOptions.firstChild);
+    }
+}
+
+startQuiz();
