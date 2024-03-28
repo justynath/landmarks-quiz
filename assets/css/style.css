@@ -18,7 +18,7 @@ body {
 .frame {
     background-color: #fefefe;
     margin: 50px 15px;
-    padding: 1px 15px;
+    padding: 10px 15px;
     border: 2px solid #0d0e0e;
     border-radius: 10px;
 }
@@ -36,6 +36,11 @@ body {
 
 .quiz h2 {
     margin: 5px auto;
+}
+
+#answer-options {
+    display: flex;
+    flex-direction: column;
 }
 
 .button {

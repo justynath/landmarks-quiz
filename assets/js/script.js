@@ -1,10 +1,7 @@
-let bigBen = new Image();
-bigBen.src = "assets/images/big-ben.png";
-
 const questions = [
     {
-        image: bigBen,
-        guestion: "Where can you find this building?",
+        image: "assets/images/big-ben.png",
+        question: "Where can you find this building?",
         answers: [
             { text: "Berlin", correct: false},
             { text: "Manchester", correct: false},
@@ -14,7 +11,7 @@ const questions = [
     },
     {
         image: "assets/images/brandenburg-gate.png",
-        guestion: "What is the name of this structure?",
+        question: "What is the name of this structure?",
         answers: [
             { text: "Arc de Triomphe", correct: false},
             { text: "Marble Arch", correct: false},
@@ -24,7 +21,7 @@ const questions = [
     },
     {
         image: "assets/images/colosseum.png",
-        guestion: "Where can you find this building?",
+        question: "Where can you find this building?",
         answers: [
             { text: "Athens", correct: false},
             { text: "Rome", correct: true},
@@ -34,7 +31,7 @@ const questions = [
     },
     {
         image: "assets/images/dome-of-the-rock.png",
-        guestion: "Where can you find this building?",
+        question: "Where can you find this building?",
         answers: [
             { text: "Israel", correct: false},
             { text: "Greece", correct: true},
@@ -44,7 +41,7 @@ const questions = [
     },
     {
         image: "assets/images/egyptian-pyramids.png",
-        guestion: "Which pharaoh is commonly associated with the Great Pyramid of Giza?",
+        question: "Which pharaoh is commonly associated with the Great Pyramid of Giza?",
         answers: [
             { text: "Ramses II", correct: false},
             { text: "Tutankhamun", correct: false},
@@ -83,10 +80,8 @@ function startQuiz() {
 function displayQuestion() {
     clearPrevious();
 
-    let currentImage = image[currentQuestionIndex];
-    imageElement.innerHTML = currentImage.image;
-
-    let currentQuestion = question[currentQuestionIndex];
+    let currentQuestion = questions[currentQuestionIndex];
+    imageElement.innerHTML = `<img src="${currentQuestion.image}">`;
     let questionNumber = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
 
@@ -94,7 +89,7 @@ function displayQuestion() {
         const newButton = document.createElement("newButton")
         newButton.innerHTML = answer.text;
         newButton.classList.add("button");
-        answerOptions.appendChild(newButton); 
+        answerOptions.appendChild(newButton);
     });
 }
 
