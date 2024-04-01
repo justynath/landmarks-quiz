@@ -34,8 +34,8 @@ const questions = [
         question: "Where can you find this building?",
         answers: [
             { text: "Israel", correct: false},
-            { text: "Greece", correct: true},
-            { text: "Jerusalem", correct: false},
+            { text: "Greece", correct: false},
+            { text: "Jerusalem", correct: true},
             { text: "Turkey", correct: false},
         ]
     },
@@ -113,6 +113,7 @@ function chooseAnswer(e) {
     // Changing the coulour of the button if corect/intorrect to green/blue
     if (isCorrect) {
         selectedButton.classList.add('correct');
+        score++;
     } else {
         selectedButton.classList.add('incorrect');
     }
@@ -124,5 +125,32 @@ function chooseAnswer(e) {
     });
     nextButton.style.display = "block";
 }
+
+function displayScore() {
+    clearPrevious();
+    questionElement.innerHTML = `Your score is ${score} out of ${questions.length}`;
+    nextButton.innerHTML = 'Play Again';
+    nextButton.style.display = "block";
+}
+
+/**
+ * Function to define how the Next button work
+ */
+function handleNextButton() {
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length) {
+        displayQuestion();
+    } else {
+        displayScore();
+    }
+}
+
+nextButton.addEventListener('click', () => {
+    if(currentQuestionIndex < questions.length) {
+        handleNextButton();
+    } else {
+        startQuiz();
+    }
+})
 
 startQuiz();
