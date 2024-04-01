@@ -30,17 +30,12 @@ body {
     margin: 25px auto 5px
 }
 
-#landmark-image {
+#landmark-image img{
     width: 100%;
 }
 
 .quiz h2 {
     margin: 5px auto;
-}
-
-#answer-options {
-    display: flex;
-    flex-direction: column;
 }
 
 .button {
@@ -71,6 +66,14 @@ body {
     border-radius: 3px;
     cursor: pointer;
     display: block;
+}
+
+.correct {
+    background-color: #d0312d;
+}
+
+.incorrect {
+    background-color: #7ae582;
 }
 
 /* Media query: tablets and larger (768px and up) */

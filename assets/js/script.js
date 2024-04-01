@@ -86,10 +86,14 @@ function displayQuestion() {
     questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
-        const newButton = document.createElement("newButton")
+        const newButton = document.createElement("button");
         newButton.innerHTML = answer.text;
         newButton.classList.add("button");
         answerOptions.appendChild(newButton);
+        if(answer.correct){
+            newButton.dataset.correct = answer.correct;
+        }
+        newButton.addEventListener('click', chooseAnswer);
     });
 }
 
@@ -100,6 +104,16 @@ function clearPrevious() {
     nextButton.style.display = "none";
     while(answerOptions.firstChild) {
         answerOptions.removeChild(answerOptions.firstChild);
+    }
+}
+
+function chooseAnswer() {
+    const selectedButton = e.target;
+    const isCorrect = selectedButton.dataset.correct === "true";
+    if (isCorrect) {
+        selectedButton.classList.add('correct');
+    } else {
+        selectedButton.classList.add('incorrect');
     }
 }
 
