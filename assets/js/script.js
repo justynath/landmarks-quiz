@@ -107,14 +107,22 @@ function clearPrevious() {
     }
 }
 
-function chooseAnswer() {
+function chooseAnswer(e) {
     const selectedButton = e.target;
     const isCorrect = selectedButton.dataset.correct === "true";
+    // Changing the coulour of the button if corect/intorrect to green/blue
     if (isCorrect) {
         selectedButton.classList.add('correct');
     } else {
         selectedButton.classList.add('incorrect');
     }
+    Array.from(answerOptions.children).forEach(button => {
+        if (button.dataset.correct === "true") {
+            button.classList.add('correct');
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
 }
 
 startQuiz();
