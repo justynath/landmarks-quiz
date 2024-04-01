@@ -129,6 +129,7 @@ function chooseAnswer(e) {
 function displayScore() {
     clearPrevious();
     questionElement.innerHTML = `Your score is ${score} out of ${questions.length}`;
+    imageElement.innerHTML = "";
     nextButton.innerHTML = 'Play Again';
     nextButton.style.display = "block";
 }
