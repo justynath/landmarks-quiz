@@ -29,7 +29,7 @@ const questions = [
             { text: "London", correct: false},
         ]
     },
-    {
+    /** {
         image: "assets/images/dome-of-the-rock.png",
         question: "In what country is this building located?",
         answers: [
@@ -99,6 +99,7 @@ const questions = [
             { text: "Spain", correct: false},
         ]
     },
+    **/
 ];
 
 const imageElement = document.getElementById("landmark-image");
@@ -176,12 +177,24 @@ function chooseAnswer(e) {
     nextButton.style.display = "block";
 }
 
+function giveFeedback() {
+    let scorePercentage = Math.floor((score / (questions.length + 1)) * 100);
+    let feedback = createElement("h3");
+    questionElement.appendChild(feedback);
+    if (scorePercentage >= 50) {
+        feedback.innerHTML = "Impressive knowledge on landmaks around the world! For more practice Play Again";
+    } else {
+        feedback.innerHTML = "To learn more about the landmaks around the world Play Again";
+    }
+}
+
 function displayScore() {
     clearPrevious();
     questionElement.innerHTML = `Your score is ${score} out of ${questions.length}`;
     imageElement.innerHTML = "";
     nextButton.innerHTML = 'Play Again';
     nextButton.style.display = "block";
+    giveFeedback();
 }
 
 /**
