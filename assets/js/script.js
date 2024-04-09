@@ -110,6 +110,18 @@ const nextButton = document.getElementById("next-button");
 let currentQuestionIndex = 0;
 let score = 0;
 
+function welcome() {
+    clearPrevious();
+    let welcomeMessage = document.getElementById('question');
+    welcomeMessage.innerHTML = 'Test your knowlegde on landmarks';
+    imageElement.innerHTML = "";
+    nextButton.style.display = "block";
+    nextButton.innerHTML = 'Start Game';
+    nextButton.addEventListener('click', startQuiz);
+}
+
+welcome();
+
 /**
  * Function to start the quiz
  */
@@ -117,7 +129,7 @@ let score = 0;
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    nextButton.innerHTML = "Next";
+    nextButton.innerHTML = 'Next';
     displayQuestion();
 }
 
@@ -226,4 +238,4 @@ nextButton.addEventListener('click', () => {
     }
 })
 
-startQuiz();
+// startQuiz();
