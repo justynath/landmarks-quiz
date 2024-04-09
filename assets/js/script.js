@@ -1,7 +1,7 @@
 const questions = [
     {
         image: "assets/images/big-ben.png",
-        question: "Where can you find this building?",
+        question: "Where is this building located?",
         answers: [
             { text: "Berlin", correct: false},
             { text: "Manchester", correct: false},
@@ -21,7 +21,7 @@ const questions = [
     },
     {
         image: "assets/images/colosseum.png",
-        question: "Where can you find this building?",
+        question: "Where is this building located?",
         answers: [
             { text: "Athens", correct: false},
             { text: "Rome", correct: true},
@@ -31,7 +31,7 @@ const questions = [
     },
     {
         image: "assets/images/dome-of-the-rock.png",
-        question: "Where can you find this building?",
+        question: "In what country is this building located?",
         answers: [
             { text: "Israel", correct: false},
             { text: "Greece", correct: false},
@@ -47,6 +47,56 @@ const questions = [
             { text: "Tutankhamun", correct: false},
             { text: "Khufu", correct: true},
             { text: "Hatshepsut", correct: false},
+        ]
+    },
+    {
+        image: "assets/images/eiffel-tower.png",
+        question: "In what year was the Eiffel Tower completed and opened to the public?",
+        answers: [
+            { text: "1819", correct: false},
+            { text: "1909", correct: false},
+            { text: "1889", correct: true},
+            { text: "1959", correct: false},
+        ]
+    },
+    {
+        image: "assets/images/empire-state-building.png",
+        question: "Where is this building located?",
+        answers: [
+            { text: "New York", correct: true},
+            { text: "Toronto", correct: false},
+            { text: "Berlin", correct: false},
+            { text: "Hong Kong", correct: false},
+        ]
+    },
+    {
+        image: "assets/images/golden-gate-bridge.png",
+        question: "In what country is this bridge located?",
+        answers: [
+            { text: "United States", correct: true},
+            { text: "China", correct: false},
+            { text: "Canada", correct: false},
+            { text: "France", correct: false},
+        ]
+    },
+    {
+        image: "assets/images/great-wall-of-china.png",
+        question: "How long is this building?",
+        answers: [
+            { text: "20,340 kilometers", correct: false},
+            { text: "21,196 kilometers", correct: true},
+            { text: "8,009 kilometers", correct: false},
+            { text: "15,996 kilometers", correct: false},
+        ]
+    },
+    {
+        image: "assets/images/leaning-tower-of-pisa.png",
+        question: "In wahat country is this building located?",
+        answers: [
+            { text: "Greece", correct: false},
+            { text: "Italy", correct: true},
+            { text: "United Kingdom", correct: false},
+            { text: "Spain", correct: false},
         ]
     },
 ];
