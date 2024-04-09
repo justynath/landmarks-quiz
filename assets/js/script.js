@@ -161,7 +161,7 @@ function clearPrevious() {
 function chooseAnswer(e) {
     const selectedButton = e.target;
     const isCorrect = selectedButton.dataset.correct === "true";
-    // Changing the coulour of the button if corect/intorrect to green/blue
+    // Changing the coulour of the button if corect/intorrect to green/red
     if (isCorrect) {
         selectedButton.classList.add('correct');
         score++;
@@ -177,24 +177,33 @@ function chooseAnswer(e) {
     nextButton.style.display = "block";
 }
 
+/**
+ * Function to give feedback based on final score
+ */
 function giveFeedback() {
     let scorePercentage = Math.floor((score / (questions.length + 1)) * 100);
-    let feedback = createElement("h3");
+    let feedback = document.createElement('h3');
     questionElement.appendChild(feedback);
     if (scorePercentage >= 50) {
-        feedback.innerHTML = "Impressive knowledge on landmaks around the world! For more practice Play Again";
+        feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For more practice play again';
+        feedback.style.color = "green";
     } else {
-        feedback.innerHTML = "To learn more about the landmaks around the world Play Again";
+        feedback.innerHTML = 'To learn more about the landmaks around the world play again';
+        feedback.style.color = "red";
     }
 }
 
+/** 
+ * Function to display final score
+*/
 function displayScore() {
     clearPrevious();
     questionElement.innerHTML = `Your score is ${score} out of ${questions.length}`;
     imageElement.innerHTML = "";
-    nextButton.innerHTML = 'Play Again';
-    nextButton.style.display = "block";
     giveFeedback();
+    nextButton.innerHTML = 'Play Again';
+    nextButton.style.display = 'block';
+ 
 }
 
 /**
