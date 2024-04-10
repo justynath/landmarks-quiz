@@ -34,7 +34,7 @@ body {
     width: 100%;
 }
 
-.quiz h2 {
+#quiz h2 {
     margin: 5px auto;
 }
 
@@ -78,6 +78,16 @@ body {
 
 .incorrect {
     background-color: #ff999c;
+}
+
+.fact {
+    color: #0d0e0e;
+    width: 100%;
+    border: 1px solid #0d0e0e;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px; 
 }
 
 /* Media query: tablets and larger (768px and up) */

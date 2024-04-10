@@ -8,7 +8,7 @@ const questions = [
             { text: "London", correct: true},
             { text: "Amsterdam", correct: false},
         ],
-        info: "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London, England.",
+        info: "Big Ben stands at the north end of the Palace of Westminster in London, England. This iconic clock tower is situated right next to the River Thames, providing not only a picturesque backdrop but also a strategic location for its construction.",
     },
     {
         image: "assets/images/brandenburg-gate.png",
@@ -19,7 +19,7 @@ const questions = [
             { text: "Golden Gate", correct: false},
             { text: "Brandenburg Gate", correct: true},
         ],
-        info: "",
+        info: "During the Cold War era, when Berlin was divided into East and West, the Brandenburg Gate stood as a prominent symbol of the division between the two sides of the city. However, following the fall of the Berlin Wall in 1989, the Brandenburg Gate became a symbol of the reunification of Germany and Europe, signifying hope, peace, and freedom.",
     },
     {
         image: "assets/images/colosseum.png",
@@ -30,7 +30,7 @@ const questions = [
             { text: "Paris", correct: false},
             { text: "London", correct: false},
         ],
-        info: "",
+        info: "Colosseum was strategically situated in the heart of ancient Rome, near the Roman Forum and the Capitoline Hill. This central location made it easily accessible to the citizens of Rome, allowing tens of thousands of spectators to attend events held at the amphitheater.",
     },
     /** {
         image: "assets/images/dome-of-the-rock.png",
@@ -109,6 +109,7 @@ const imageElement = document.getElementById("landmark-image");
 const questionElement = document.getElementById("question");
 const answerOptions = document.getElementById("answer-options");
 const nextButton = document.getElementById("next-button");
+const quizArea = document.getElementById("quiz");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -180,13 +181,18 @@ function chooseAnswer(e) {
     if (isCorrect) {
         selectedButton.classList.add('correct');
         let fact = document.createElement("p");
-        selectedButton.appendChild(fact);
+        fact.classList.add('fact', 'correct');
+        answerOptions.appendChild(fact);
         let currentQuestion = questions[currentQuestionIndex];
-        fact.innerHTML = currentQuestion.info;
+        fact.innerHTML = 'Correct!' + '<br>' + currentQuestion.info;
         score++;
-
     } else {
         selectedButton.classList.add('incorrect');
+        let fact = document.createElement("p");
+        fact.classList.add('fact', 'incorrect');
+        answerOptions.appendChild(fact);
+        let currentQuestion = questions[currentQuestionIndex];
+        fact.innerHTML = 'Incorrect!' + '<br>' + currentQuestion.info;
     }
     Array.from(answerOptions.children).forEach(button => {
         if (button.dataset.correct === "true") {
