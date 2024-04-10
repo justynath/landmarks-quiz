@@ -109,7 +109,7 @@ const imageElement = document.getElementById("landmark-image");
 const questionElement = document.getElementById("question");
 const answerOptions = document.getElementById("answer-options");
 const nextButton = document.getElementById("next-button");
-const quizArea = document.getElementById("quiz");
+//const frame = document.getElementsByClassName("frame");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -177,11 +177,11 @@ function clearPrevious() {
 function chooseAnswer(e) {
     const selectedButton = e.target;
     const isCorrect = selectedButton.dataset.correct === "true";
-    // Changing the coulour of the button if corect/intorrect to green/red
+    // Changing the colour of the button if corect/incorrect to green/red. Adding interesting fact about the landmark
     if (isCorrect) {
         selectedButton.classList.add('correct');
         let fact = document.createElement("p");
-        fact.classList.add('fact', 'correct');
+        fact.classList.add('button', 'fact', 'correct');
         answerOptions.appendChild(fact);
         let currentQuestion = questions[currentQuestionIndex];
         fact.innerHTML = 'Correct!' + '<br>' + currentQuestion.info;
@@ -213,9 +213,11 @@ function giveFeedback() {
     if (scorePercentage >= 50) {
         feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For more practice play again';
         feedback.style.color = "green";
+        //frame.classList.add('correct');
     } else {
-        feedback.innerHTML = 'To learn more about the landmaks around the world play again';
+        feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world play again';
         feedback.style.color = "red";
+        //frame.classList.add('incorrect');
     }
 }
 
