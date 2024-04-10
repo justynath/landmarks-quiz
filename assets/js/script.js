@@ -7,7 +7,8 @@ const questions = [
             { text: "Manchester", correct: false},
             { text: "London", correct: true},
             { text: "Amsterdam", correct: false},
-        ]
+        ],
+        info: "Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London, England.",
     },
     {
         image: "assets/images/brandenburg-gate.png",
@@ -17,7 +18,8 @@ const questions = [
             { text: "Marble Arch", correct: false},
             { text: "Golden Gate", correct: false},
             { text: "Brandenburg Gate", correct: true},
-        ]
+        ],
+        info: "",
     },
     {
         image: "assets/images/colosseum.png",
@@ -27,7 +29,8 @@ const questions = [
             { text: "Rome", correct: true},
             { text: "Paris", correct: false},
             { text: "London", correct: false},
-        ]
+        ],
+        info: "",
     },
     /** {
         image: "assets/images/dome-of-the-rock.png",
@@ -110,6 +113,7 @@ const nextButton = document.getElementById("next-button");
 let currentQuestionIndex = 0;
 let score = 0;
 
+/*
 function welcome() {
     clearPrevious();
     let welcomeMessage = document.getElementById('question');
@@ -119,8 +123,7 @@ function welcome() {
     nextButton.innerHTML = 'Start Game';
     nextButton.addEventListener('click', startQuiz);
 }
-
-welcome();
+*/
 
 /**
  * Function to start the quiz
@@ -176,7 +179,12 @@ function chooseAnswer(e) {
     // Changing the coulour of the button if corect/intorrect to green/red
     if (isCorrect) {
         selectedButton.classList.add('correct');
+        let fact = document.createElement("p");
+        selectedButton.appendChild(fact);
+        let currentQuestion = questions[currentQuestionIndex];
+        fact.innerHTML = currentQuestion.info;
         score++;
+
     } else {
         selectedButton.classList.add('incorrect');
     }
@@ -238,4 +246,6 @@ nextButton.addEventListener('click', () => {
     }
 })
 
-// startQuiz();
+
+// welcome();
+startQuiz();
