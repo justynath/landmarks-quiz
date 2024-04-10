@@ -32,7 +32,7 @@ const questions = [
         ],
         info: "Colosseum was strategically situated in the heart of ancient Rome, near the Roman Forum and the Capitoline Hill. This central location made it easily accessible to the citizens of Rome, allowing tens of thousands of spectators to attend events held at the amphitheater.",
     },
-    /** {
+    /* {
         image: "assets/images/dome-of-the-rock.png",
         question: "In what country is this building located?",
         answers: [
@@ -114,17 +114,18 @@ const nextButton = document.getElementById("next-button");
 let currentQuestionIndex = 0;
 let score = 0;
 
-/*
+/**
+ * Showing the welcome page
+ */
 function welcome() {
     clearPrevious();
     let welcomeMessage = document.getElementById('question');
     welcomeMessage.innerHTML = 'Test your knowlegde on landmarks';
     imageElement.innerHTML = "";
     nextButton.style.display = "block";
-    nextButton.innerHTML = 'Start Game';
+    nextButton.innerHTML = 'Start Quiz';
     nextButton.addEventListener('click', startQuiz);
 }
-*/
 
 /**
  * Function to start the quiz
@@ -134,8 +135,12 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = 'Next';
+    // remove startQuiz event listener here <<<<
+    nextButton.removeEventListener('click', startQuiz);
+    nextButton.addEventListener('click', handleNextButton);
     displayQuestion();
 }
+
 
 /**
  * Function to display a question: 
@@ -243,17 +248,18 @@ function handleNextButton() {
         displayQuestion();
     } else {
         displayScore();
+        nextButton.removeEventListener('click', handleNextButton);
+        nextButton.addEventListener('click', startQuiz);
+        
     }
 }
 
-nextButton.addEventListener('click', () => {
-    if(currentQuestionIndex < questions.length) {
-        handleNextButton();
-    } else {
-        startQuiz();
-    }
-})
+// nextButton.addEventListener('click', () => {
+//     if(currentQuestionIndex < questions.length) {
+//         handleNextButton();
+//     } else {
+//         startQuiz();
+//     }
+// })
 
-
-// welcome();
-startQuiz();
+welcome();
