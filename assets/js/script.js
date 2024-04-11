@@ -110,6 +110,7 @@ const questionElement = document.getElementById("question");
 const answerOptions = document.getElementById("answer-options");
 const nextButton = document.getElementById("next-button");
 const frame = document.getElementsByClassName("frame")[0];
+const quizElement = document.getElementsByClassName("quiz")[0];
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -132,6 +133,12 @@ function welcome() {
  */
 
 function startQuiz() {
+    // Resets the colour of the background
+    if (frame.classList.contains("correct-color")) {
+        frame.classList.remove('correct-color');
+    } else {
+        frame.classList.remove('incorrect-color');
+    };
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = 'Next';
@@ -172,8 +179,8 @@ function displayQuestion() {
  * Function to clear the previous question
  */
 function clearPrevious() {
-    frame.classList.add('default');
     nextButton.style.display = "none";
+    //quizElement.removeChild('feedback');
     while(answerOptions.firstChild) {
         answerOptions.removeChild(answerOptions.firstChild);
     }
@@ -189,18 +196,18 @@ function chooseAnswer(e) {
     let currentQuestion = questions[currentQuestionIndex];
     // Changing the colour of the button if corect/incorrect to green/red. Adding interesting fact about the landmark
     if (isCorrect) {
-        selectedButton.classList.add('correct');
-        fact.classList.add('correct');
+        selectedButton.classList.add('correct-color');
+        fact.classList.add('correct-color');
         fact.innerHTML = 'Correct!' + '<br>' + currentQuestion.info;
         score++;
     } else {
-        selectedButton.classList.add('incorrect');
-        fact.classList.add('incorrect');
+        selectedButton.classList.add('incorrect-color');
+        fact.classList.add('incorrect-color');
         fact.innerHTML = 'Incorrect!' + '<br>' + currentQuestion.info;
     }
     Array.from(answerOptions.children).forEach(button => {
         if (button.dataset.correct === "true") {
-            button.classList.add('correct');
+            button.classList.add('correct-color');
         }
         button.disabled = true;
     });
@@ -211,20 +218,20 @@ function chooseAnswer(e) {
  * Function to give feedback based on final score
  */
 function giveFeedback() {
-    console.log('give feedback invoked')
     let scorePercentage = Math.floor((score / (questions.length + 1)) * 100);
-    console.log('scorePercentage: :', scorePercentage)
     let feedback = document.createElement('h3');
     questionElement.appendChild(feedback);
+    feedback.classList.add('feedback-message');
+
+   // quizElement.insertBefore(feedback, nextButton);
     if (scorePercentage >= 50) {
-        feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For more practice play again';
-        feedback.style.color = "green";
-        frame.classList.add('correct');
+        feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For more practice play again.';
+        feedback.style.color = "darkgreen";
+        frame.classList.add('correct-color');
     } else {
-        console.log('bad score')
-        feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world play again';
-        feedback.style.color = "red";
-        frame.classList.add('incorrect');
+        feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world play again.';
+        feedback.style.color = "darkred";
+        frame.classList.add('incorrect-color');
     }
 }
 
@@ -238,7 +245,6 @@ function displayScore() {
     giveFeedback();
     nextButton.innerHTML = 'Play Again';
     nextButton.style.display = 'block';
- 
 }
 
 /**
@@ -255,13 +261,5 @@ function handleNextButton() {
         
     }
 }
-
-// nextButton.addEventListener('click', () => {
-//     if(currentQuestionIndex < questions.length) {
-//         handleNextButton();
-//     } else {
-//         startQuiz();
-//     }
-// })
 
 welcome();
