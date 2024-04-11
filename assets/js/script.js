@@ -109,7 +109,7 @@ const imageElement = document.getElementById("landmark-image");
 const questionElement = document.getElementById("question");
 const answerOptions = document.getElementById("answer-options");
 const nextButton = document.getElementById("next-button");
-//const frame = document.getElementsByClassName("frame");
+const frame = document.getElementsByClassName("frame")[0];
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -135,7 +135,6 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = 'Next';
-    // remove startQuiz event listener here <<<<
     nextButton.removeEventListener('click', startQuiz);
     nextButton.addEventListener('click', handleNextButton);
     displayQuestion();
@@ -173,6 +172,7 @@ function displayQuestion() {
  * Function to clear the previous question
  */
 function clearPrevious() {
+    frame.classList.add('default');
     nextButton.style.display = "none";
     while(answerOptions.firstChild) {
         answerOptions.removeChild(answerOptions.firstChild);
@@ -182,21 +182,20 @@ function clearPrevious() {
 function chooseAnswer(e) {
     const selectedButton = e.target;
     const isCorrect = selectedButton.dataset.correct === "true";
+    // Creating and element to display an interesting fact linked to the question
+    let fact = document.createElement("p");
+    fact.classList.add('fact');
+    answerOptions.appendChild(fact);
+    let currentQuestion = questions[currentQuestionIndex];
     // Changing the colour of the button if corect/incorrect to green/red. Adding interesting fact about the landmark
     if (isCorrect) {
         selectedButton.classList.add('correct');
-        let fact = document.createElement("p");
-        fact.classList.add('button', 'fact', 'correct');
-        answerOptions.appendChild(fact);
-        let currentQuestion = questions[currentQuestionIndex];
+        fact.classList.add('correct');
         fact.innerHTML = 'Correct!' + '<br>' + currentQuestion.info;
         score++;
     } else {
         selectedButton.classList.add('incorrect');
-        let fact = document.createElement("p");
-        fact.classList.add('fact', 'incorrect');
-        answerOptions.appendChild(fact);
-        let currentQuestion = questions[currentQuestionIndex];
+        fact.classList.add('incorrect');
         fact.innerHTML = 'Incorrect!' + '<br>' + currentQuestion.info;
     }
     Array.from(answerOptions.children).forEach(button => {
@@ -212,17 +211,20 @@ function chooseAnswer(e) {
  * Function to give feedback based on final score
  */
 function giveFeedback() {
+    console.log('give feedback invoked')
     let scorePercentage = Math.floor((score / (questions.length + 1)) * 100);
+    console.log('scorePercentage: :', scorePercentage)
     let feedback = document.createElement('h3');
     questionElement.appendChild(feedback);
     if (scorePercentage >= 50) {
         feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For more practice play again';
         feedback.style.color = "green";
-        //frame.classList.add('correct');
+        frame.classList.add('correct');
     } else {
+        console.log('bad score')
         feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world play again';
         feedback.style.color = "red";
-        //frame.classList.add('incorrect');
+        frame.classList.add('incorrect');
     }
 }
 
