@@ -134,6 +134,14 @@ function welcome() {
     nextButton.addEventListener('click', startQuiz);
 }
 
+/** 
+ * Function to select a random question from the array
+*/ 
+function getRandomQuestion() {
+    let randomIndex = Math.floor(Math.random() * questions.length);
+    return questions[randomIndex];
+}
+
 /**
  * Function to start the quiz
  */
@@ -157,12 +165,21 @@ function startQuiz() {
 /**
  * Function to display a question: 
  * clear the previous question, 
+ * display the image,
  * display question text with question number, 
  * show four answer options
  */
 
 function displayQuestion() {
     clearPrevious();
+ /*
+    while (currentQuestionIndex < 2) {
+        let currentQuestion = getRandomQuestion();
+        imageElement.innerHTML = `<img src="${currentQuestion.image}">`;
+        let questionNumber = currentQuestionIndex + 1;
+        questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
+    }
+*/
 
     let currentQuestion = questions[currentQuestionIndex];
     imageElement.innerHTML = `<img src="${currentQuestion.image}">`;
