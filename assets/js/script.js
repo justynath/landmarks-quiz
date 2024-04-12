@@ -32,7 +32,7 @@ const questions = [
         ],
         info: "Colosseum was strategically situated in the heart of ancient Rome, near the Roman Forum and the Capitoline Hill. This central location made it easily accessible to the citizens of Rome, allowing tens of thousands of spectators to attend events held at the amphitheater.",
     },
-    /* {
+    {
         image: "assets/images/dome-of-the-rock.png",
         question: "In what country is this building located?",
         answers: [
@@ -40,7 +40,8 @@ const questions = [
             { text: "Greece", correct: false},
             { text: "Jerusalem", correct: true},
             { text: "Turkey", correct: false},
-        ]
+        ],
+        info: "The Dome of the Rock sits atop the Temple Mount in Jerusalem, marking the believed location of the First and Second Temples. This makes it a highly significant site for Jews, Muslims, and Christians.",
     },
     {
         image: "assets/images/egyptian-pyramids.png",
@@ -50,7 +51,8 @@ const questions = [
             { text: "Tutankhamun", correct: false},
             { text: "Khufu", correct: true},
             { text: "Hatshepsut", correct: false},
-        ]
+        ],
+        info: "Khufu, also known as Cheops, oversaw the construction of the Great Pyramid of Giza around 4,500 years ago. It remained the world's tallest man-made structure for over 3,800 years. Its precise alignment with the cardinal points of the compass is a testament to ancient Egyptian engineering ingenuity.",
     },
     {
         image: "assets/images/eiffel-tower.png",
@@ -60,7 +62,8 @@ const questions = [
             { text: "1909", correct: false},
             { text: "1889", correct: true},
             { text: "1959", correct: false},
-        ]
+        ],
+        info: "Eiffel Tower, completed in 1889, was constructed as the entrance arch for the 1889 World's Fair (Exposition Universelle) held in Paris, France. Designed by Gustave Eiffel's company as a temporary structure, the tower's iconic design and structural innovation quickly captured the world's imagination, leading to its preservation as a permanent landmark.",
     },
     {
         image: "assets/images/empire-state-building.png",
@@ -70,7 +73,8 @@ const questions = [
             { text: "Toronto", correct: false},
             { text: "Berlin", correct: false},
             { text: "Hong Kong", correct: false},
-        ]
+        ],
+        info: "The Empire State Building was strategically located in Midtown Manhattan, New York City, at the intersection of Fifth Avenue and West 34th Street, making it easily accessible and ensuring its prominence in the city's skyline.",
     },
     {
         image: "assets/images/golden-gate-bridge.png",
@@ -80,7 +84,8 @@ const questions = [
             { text: "China", correct: false},
             { text: "Canada", correct: false},
             { text: "France", correct: false},
-        ]
+        ],
+        info: "Golden Gate Bridge, located in the United States, was once the longest suspension bridge in the world when it was completed in 1937, with a main span of 4,200 feet (1,280 meters). This iconic bridge, situated in San Francisco, California, has since become a symbol of American engineering prowess and a renowned landmark recognized worldwide.",
     },
     {
         image: "assets/images/great-wall-of-china.png",
@@ -90,7 +95,8 @@ const questions = [
             { text: "21,196 kilometers", correct: true},
             { text: "8,009 kilometers", correct: false},
             { text: "15,996 kilometers", correct: false},
-        ]
+        ],
+        info: "The Great Wall of China's total length, including all its branches and sections, is estimated to be around 13,170 miles (21,196 kilometers). This extensive structure, constructed over centuries by various Chinese dynasties, stands as one of the most impressive architectural achievements in human history.",
     },
     {
         image: "assets/images/leaning-tower-of-pisa.png",
@@ -100,9 +106,9 @@ const questions = [
             { text: "Italy", correct: true},
             { text: "United Kingdom", correct: false},
             { text: "Spain", correct: false},
-        ]
+        ],
+        info: "Despite its unintended lean, the Leaning Tower of Pisa, situated in Italy, has become a globally recognized icon. Its tilt, resulting from unstable soil during construction, adds to its allure, drawing millions of visitors each year to marvel at this unique architectural wonder and its intriguing history.",
     },
-    **/
 ];
 
 const imageElement = document.getElementById("landmark-image");
@@ -223,7 +229,6 @@ function giveFeedback() {
     questionElement.appendChild(feedback);
     feedback.classList.add('feedback-message');
 
-   // quizElement.insertBefore(feedback, nextButton);
     if (scorePercentage >= 50) {
         feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For more practice play again';
         feedback.style.color = "darkgreen";
