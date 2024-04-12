@@ -121,7 +121,7 @@ let score = 0;
 function welcome() {
     clearPrevious();
     let welcomeMessage = document.getElementById('question');
-    welcomeMessage.innerHTML = 'Test your knowlegde on landmarks';
+    welcomeMessage.innerHTML = 'Test your knowlegde on landmarks around the world';
     imageElement.innerHTML = "";
     nextButton.style.display = "block";
     nextButton.innerHTML = 'Start Quiz';
@@ -225,11 +225,11 @@ function giveFeedback() {
 
    // quizElement.insertBefore(feedback, nextButton);
     if (scorePercentage >= 50) {
-        feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For more practice play again.';
+        feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For more practice play again';
         feedback.style.color = "darkgreen";
         frame.classList.add('correct-color');
     } else {
-        feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world play again.';
+        feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world play again';
         feedback.style.color = "darkred";
         frame.classList.add('incorrect-color');
     }
