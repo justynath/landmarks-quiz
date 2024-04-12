@@ -111,6 +111,7 @@ const questions = [
     },
 ];
 
+
 const imageElement = document.getElementById("landmark-image");
 const questionElement = document.getElementById("question");
 const answerOptions = document.getElementById("answer-options");
@@ -120,6 +121,7 @@ const quizElement = document.getElementsByClassName("quiz")[0];
 
 let currentQuestionIndex = 0;
 let score = 0;
+let randomQuestions = []
 
 /**
  * Showing the welcome page
@@ -134,12 +136,28 @@ function welcome() {
     nextButton.addEventListener('click', startQuiz);
 }
 
-/** 
- * Function to select a random question from the array
-*/ 
-function getRandomQuestion() {
-    let randomIndex = Math.floor(Math.random() * questions.length);
-    return questions[randomIndex];
+
+function getTestRandomQuestions(allQuestions, numQuestions = 5) {
+    // Make a copy of the original allQuestions array to avoid modifying it
+    let remainingQuestions = allQuestions.slice();
+    let randomQuestions = [];
+
+    // Check if the number of allQuestions requested is greater than the number of available allQuestions
+    if (numQuestions > remainingQuestions.length) {
+        return remainingQuestions;
+    }
+
+    // Iterate until the desired number of allQuestions is reached
+    for (let i = 0; i < numQuestions; i++) {
+        // Generate a random index within the range of remaining allQuestions
+        let randomIndex = Math.floor(Math.random() * remainingQuestions.length);
+        // Add the randomly selected question to the result array
+        randomQuestions.push(remainingQuestions[randomIndex]);
+        // Remove the selected question from the list of remaining allQuestions
+        remainingQuestions.splice(randomIndex, 1);
+    }
+
+    return randomQuestions;
 }
 
 /**
@@ -158,9 +176,13 @@ function startQuiz() {
     nextButton.innerHTML = 'Next';
     nextButton.removeEventListener('click', startQuiz);
     nextButton.addEventListener('click', handleNextButton);
+    setCurrentQuestions()
     displayQuestion();
 }
 
+function setCurrentQuestions() {
+    randomQuestions = getTestRandomQuestions(questions)
+}
 
 /**
  * Function to display a question: 
@@ -172,16 +194,7 @@ function startQuiz() {
 
 function displayQuestion() {
     clearPrevious();
- /*
-    while (currentQuestionIndex < 2) {
-        let currentQuestion = getRandomQuestion();
-        imageElement.innerHTML = `<img src="${currentQuestion.image}">`;
-        let questionNumber = currentQuestionIndex + 1;
-        questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
-    }
-*/
-
-    let currentQuestion = questions[currentQuestionIndex];
+    let currentQuestion = randomQuestions[currentQuestionIndex];
     imageElement.innerHTML = `<img src="${currentQuestion.image}">`;
     let questionNumber = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
@@ -216,7 +229,7 @@ function chooseAnswer(e) {
     let fact = document.createElement("p");
     fact.classList.add('fact');
     answerOptions.appendChild(fact);
-    let currentQuestion = questions[currentQuestionIndex];
+    let currentQuestion = randomQuestions[currentQuestionIndex];
     // Changing the colour of the button if corect/incorrect to green/red. Adding interesting fact about the landmark
     if (isCorrect) {
         selectedButton.classList.add('correct-color');
@@ -241,7 +254,7 @@ function chooseAnswer(e) {
  * Function to give feedback based on final score
  */
 function giveFeedback() {
-    let scorePercentage = Math.floor((score / (questions.length + 1)) * 100);
+    let scorePercentage = Math.floor((score / (randomQuestions.length + 1)) * 100);
     let feedback = document.createElement('h3');
     questionElement.appendChild(feedback);
     feedback.classList.add('feedback-message');
@@ -262,7 +275,7 @@ function giveFeedback() {
 */
 function displayScore() {
     clearPrevious();
-    questionElement.innerHTML = `Your score is ${score} out of ${questions.length}`;
+    questionElement.innerHTML = `Your score is ${score} out of ${randomQuestions.length}`;
     imageElement.innerHTML = "";
     giveFeedback();
     nextButton.innerHTML = 'Play Again';
@@ -274,7 +287,7 @@ function displayScore() {
  */
 function handleNextButton() {
     currentQuestionIndex++;
-    if(currentQuestionIndex < questions.length) {
+    if(currentQuestionIndex < randomQuestions.length) {
         displayQuestion();
     } else {
         displayScore();
