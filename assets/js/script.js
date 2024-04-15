@@ -100,7 +100,7 @@ const questions = [
     },
     {
         image: "assets/images/leaning-tower-of-pisa.png",
-        question: "In wahat country is this building located?",
+        question: "In what country is this building located?",
         answers: [
             { text: "Greece", correct: false},
             { text: "Italy", correct: true},
@@ -109,7 +109,95 @@ const questions = [
         ],
         info: "Despite its unintended lean, the Leaning Tower of Pisa, situated in Italy, has become a globally recognized icon. Its tilt, resulting from unstable soil during construction, adds to its allure, drawing millions of visitors each year to marvel at this unique architectural wonder and its intriguing history.",
     },
-];
+    {
+        image: "assets/images/machu-picchu.png",
+        question: "In what country is this landmark located?",
+        answers: [
+            { text: "Mexico", correct: false},
+            { text: "Thailand", correct: false},
+            { text: "Peru", correct: true},
+            { text: "Spain", correct: false},
+        ],
+        info: "Machu Picchu's location in Peru adds to its allure, with its purpose still debated by historians. It's a captivating archaeological site attracting millions of visitors annually.",
+    },
+    {
+        image: "assets/images/niagara-falls.png",
+        question: "What is this natural wonder called?",
+        answers: [
+            { text: "Victoria Falls", correct: false},
+            { text: "Cliffs of Moher", correct: false},
+            { text: "Iguazu Falls", correct: false},
+            { text: "Niagara Falls", correct: true},
+        ],
+        info: 'The name "Niagara Falls" likely has its roots in the indigenous language of the Iroquois people, specifically the word "Onguiaahra," which translates to "the strait" or "thundering waters." This linguistic connection highlights the rich cultural heritage associated with this iconic natural wonder.',
+    },
+    {
+        image: "assets/images/notre-dame.png",
+        question: "What is this building called called?",
+        answers: [
+            { text: "Notre Dame Cathedral", correct: true},
+            { text: "Westminster Abbey", correct: false},
+            { text: "Saint Peter's Basilica", correct: false},
+            { text: "Sacré-Cœur Basilica", correct: false},
+        ],
+        info: 'The name "Notre Dame" translates to "Our Lady" in French, typically referring to the Virgin Mary, the mother of Jesus. The term "Notre Dame" is commonly used to honor her in the Catholic faith and is often associated with churches and cathedrals dedicated to her.',
+    },
+    {
+        image: "assets/images/statue-of-liberty.png",
+        question: "What is the official name of this landmark?",
+        answers: [
+            { text: "Lady of Liberty", correct: false},
+            { text: "Statue of Freedom", correct: false},
+            { text: "Liberty Enlightening the World", correct: true},
+            { text: "Statue of Independence", correct: false},
+        ],
+        info: "The Statue of Liberty's full name is Liberty Enlightening the World. This iconic statue was a gift from France to the United States and was dedicated on October 28, 1886. Designed by French sculptor Frédéric Auguste Bartholdi, the statue symbolizes freedom and democracy, and it has since become a universal symbol of liberty and democracy worldwide.",
+    },
+    {
+        image: "assets/images/stonehenge.png",
+        question: "In what country is this landmark located?",
+        answers: [
+            { text: "England", correct: true},
+            { text: "Scotland", correct: false},
+            { text: "Wales", correct: false},
+            { text: "Ireland", correct: false},
+        ],
+        info: "Stonehenge, located in England, is one of the most famous prehistoric monuments in the world. Despite its fame and recognition, the purpose of Stonehenge remains a subject of debate among archaeologists and historians.",
+    },
+    {
+        image: "assets/images/sydney-opera-house.png",
+        question: "Where is this landmark located?",
+        answers: [
+            { text: "San Francisco", correct: false},
+            { text: "Sydney", correct: true},
+            { text: "Los Angeles", correct: false},
+            { text: "Melburne", correct: false},
+        ],
+        info: "Sydney Opera House is in Sydney, Australia. Its renowned sail-like design was inspired by the natural shape of orange segments. Designed by Danish architect Jørn Utzon, this iconic structure stands as a testament to innovative architectural vision and has become a symbol of artistic excellence and cultural significance not only in Australia but worldwide.",
+    },
+    {
+        image: "assets/images/taj-mahal.png",
+        question: "In what country is this landmark located?",
+        answers: [
+            { text: "Thailand", correct: false},
+            { text: "Japan", correct: false},
+            { text: "India", correct: true},
+            { text: "China", correct: false},
+        ],
+        info: "Taj Mahal in India was built by Emperor Shah Jahan in the 17th century in memory of his wife, Mumtaz Mahal. This architectural marvel, crafted from white marble, stands as a symbol of love and artistic brilliance in the city of Agra, drawing visitors from across the globe to witness its beauty and history.",
+    },
+    {
+        image: "assets/images/the-acropolis.png",
+        question: "Where is this landmark located?",
+        answers: [
+            { text: "Istanbul", correct: false},
+            { text: "Rome", correct: false},
+            { text: "Cairo", correct: false},
+            { text: "Athens", correct: true},
+        ],
+        info: "Acropolis in Athens served not only as a religious center but also as a symbol of democracy and the flourishing of arts and sciences in ancient Greece. It stands as a testament to the cultural and intellectual achievements of the Athenian civilization, influencing Western architecture and philosophy for centuries to come.",
+    },
+    ];
 
 
 const imageElement = document.getElementById("landmark-image");
@@ -181,7 +269,7 @@ function startQuiz() {
 }
 
 function setCurrentQuestions() {
-    randomQuestions = getTestRandomQuestions(questions)
+    randomQuestions = getTestRandomQuestions(questions, 7)
 }
 
 /**
