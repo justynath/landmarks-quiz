@@ -197,6 +197,83 @@ const questions = [
         ],
         info: "Acropolis in Athens served not only as a religious center but also as a symbol of democracy and the flourishing of arts and sciences in ancient Greece. It stands as a testament to the cultural and intellectual achievements of the Athenian civilization, influencing Western architecture and philosophy for centuries to come.",
     },
+    {
+        image: "assets/images/the-grand-canyon.png",
+        question: "In what state in the USA is this nature wonder located?",
+        answers: [
+            { text: "Utah", correct: false},
+            { text: "Nevada", correct: false},
+            { text: "California", correct: false},
+            { text: "Arizona", correct: true},
+        ],
+        info: "Grand Canyon in Arizona is home to a rich variety of plant and animal life, including several species found nowhere else on Earth. From elusive mountain lions and bighorn sheep to ancient bristlecone pines and delicate wildflowers, the Grand Canyon is a biodiversity hotspot, offering endless opportunities for exploration and discovery.",
+    },
+    {
+        image: "assets/images/the-great-sphinx.png",
+        question: "What mythical creature is the landmark believed to represent?",
+        answers: [
+            { text: "Griffin", correct: false},
+            { text: "Chimera", correct: false},
+            { text: "Sphinx", correct: true},
+            { text: "Manticore", correct: false},
+        ],
+        info: "Sphinx, represented by the Great Sphinx of Giza, combines elements of both human and animal features. While the body of the Great Sphinx resembles that of a lion, symbolizing strength and power, its face is believed to bear the likeness of Pharaoh Khafre, blending human and divine attributes.",
+    },
+    {
+        image: "assets/images/the-little-mermaid.png",
+        question: "In what country is this statue located?",
+        answers: [
+            { text: "Denmark", correct: true},
+            { text: "Germany", correct: false},
+            { text: "Sweden", correct: false},
+            { text: "Poland", correct: false},
+        ],
+        info: "The Little Mermaid in Denmark was inspired by the famous fairy tale of the same name written by Danish author Hans Christian Andersen. Erected in 1913, the statue has become an iconic symbol of Copenhagen and a popular tourist attraction.",
+    },
+    {
+        image: "assets/images/the-louvre.png",
+        question: "What famous painting, housed in this museum, is known for its enigmatic smile?",
+        answers: [
+            { text: "The Starry Night", correct: false},
+            { text: "The Mona Lisa", correct: true},
+            { text: "The Persistence of Memory", correct: false},
+            { text: "The Creation of Adam", correct: false},
+        ],
+        info: "Mona Lisa, located in the Louvre, is one of the most famous and valuable paintings in the world, attracting millions of visitors to the museum each year. This iconic painting, created by Leonardo da Vinci in the 16th century, continues to fascinate art enthusiasts with its enigmatic smile and captivating gaze.",
+    },
+    {
+        image: "assets/images/the-pantheon.png",
+        question: "Where is this landmark located?",
+        answers: [
+            { text: "Rome", correct: true},
+            { text: "Athens", correct: false},
+            { text: "Spain", correct: false},
+            { text: "France", correct: false},
+        ],
+        info: "Pantheon in Rome is one of the best-preserved ancient Roman buildings. Originally built as a temple dedicated to all the gods of ancient Rome, its dome is still the world's largest unreinforced concrete dome.",
+    },
+    {
+        image: "assets/images/tower-bridge.png",
+        question: "Where is this landmark located?",
+        answers: [
+            { text: "Paris", correct: false},
+            { text: "Berlin", correct: false},
+            { text: "London", correct: true},
+            { text: "Amsterdam", correct: false},
+        ],
+        info: "Tower Bridge in London is not only an iconic symbol of the city but also a marvel of Victorian engineering. When it was completed in 1894, it was the largest and most sophisticated bascule bridge in the world. Its unique design allows it to open in the middle to let large ships pass through, while still providing a vital transportation link across the River Thames for pedestrians and vehicles.",
+    },
+    {
+        image: "assets/images/washington-monument.png",
+        question: "Where is this landmark located?",
+        answers: [
+            { text: "Mexico", correct: false},
+            { text: "Canada", correct: false},
+            { text: "Brazil", correct: false},
+            { text: "Unites States", correct: true},
+        ],
+        info: "Washington Monument in Wahsington DC. in the United States stands as a tribute to the nation's first president, George Washington. Construction began in 1848 and was completed in 1884, making it one of the oldest monuments in the country.",
+    },
     ];
 
 
