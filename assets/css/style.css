@@ -145,13 +145,14 @@ footer p {
 /* Media query: phone horizontal and tablet vertical view (768px and up) */
 @media screen and (min-width: 479px) {
     .frame {
-        margin: 60px 10%;
+        margin: 60px 15%;
+}
 }
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
     .frame {
-        margin: 60px 20%;
+        margin: 60px 25%;
         max-width: 800px;
     }
     footer {
