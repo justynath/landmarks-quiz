@@ -1,7 +1,9 @@
 /* Google fonts import */
 /* @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
 /* Removing default browser setting */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +11,19 @@
 }
 
 body {
-    /* font-family: "Alegreya Sans", sans-serif; */
+    /* font-family: "Noto Sans JP", sans-serif; */
     font-family: "Noto Sans JP", sans-serif;
     background-color: #d1c3b8;
     color: #0d0e0e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main */
+main {
+    /* Make main element push footer down */
+    flex: 1 0 auto;
 }
 
 /* Frame containing the quiz */
@@ -101,10 +112,36 @@ body {
     line-height: 1.5em;
 }
 
+/* Footer */
+footer {
+    background-color: #cbac1b;
+    text-align: center;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+#links {
+    display: flex;
+    justify-content:space-evenly;
+    list-style-type: none;
+}
+
+#links i {
+    font-size: 130%;
+    color: #0d0c0c;
+    padding: 10px 15px 0;
+}
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
     .frame {
         margin: 60px 30%;
         max-width: 800px;
+    }
+    footer {
+        flex-direction: row;
     }
 }
