@@ -286,10 +286,10 @@ const quizElement = document.getElementsByClassName("quiz")[0];
 
 let currentQuestionIndex = 0;
 let score = 0;
-let randomQuestions = []
+let randomQuestions = [];
 
 /**
- * Showing the welcome page
+ * Show the welcome page
  */
 function welcome() {
     clearPrevious();
@@ -301,17 +301,16 @@ function welcome() {
     nextButton.addEventListener('click', startQuiz);
 }
 
-
-function getTestRandomQuestions(allQuestions, numQuestions = 5) {
+/** Randomly select a question from the array
+ */
+function getRandomQuestions(allQuestions, numQuestions = 5) {
     // Make a copy of the original allQuestions array to avoid modifying it
     let remainingQuestions = allQuestions.slice();
     let randomQuestions = [];
-
     // Check if the number of allQuestions requested is greater than the number of available allQuestions
     if (numQuestions > remainingQuestions.length) {
         return remainingQuestions;
     }
-
     // Iterate until the desired number of allQuestions is reached
     for (let i = 0; i < numQuestions; i++) {
         // Generate a random index within the range of remaining allQuestions
@@ -321,14 +320,12 @@ function getTestRandomQuestions(allQuestions, numQuestions = 5) {
         // Remove the selected question from the list of remaining allQuestions
         remainingQuestions.splice(randomIndex, 1);
     }
-
     return randomQuestions;
 }
 
 /**
- * Function to start the quiz
+ * Start the quiz
  */
-
 function startQuiz() {
     // Resets the colour of the background
     if (frame.classList.contains("correct-color")) {
@@ -346,17 +343,15 @@ function startQuiz() {
 }
 
 function setCurrentQuestions() {
-    randomQuestions = getTestRandomQuestions(questions, 7)
+    randomQuestions = getRandomQuestions(questions, 7)
 }
 
-/**
- * Function to display a question: 
+/** Display a question: 
  * clear the previous question, 
- * display the image,
+ * display the image, 
  * display question text with question number, 
  * show four answer options
  */
-
 function displayQuestion() {
     clearPrevious();
     let currentQuestion = randomQuestions[currentQuestionIndex];
@@ -377,25 +372,27 @@ function displayQuestion() {
 }
 
 /**
- * Function to clear the previous question
+ * Clear the previous question
  */
 function clearPrevious() {
     nextButton.style.display = "none";
-    //quizElement.removeChild('feedback');
     while(answerOptions.firstChild) {
         answerOptions.removeChild(answerOptions.firstChild);
     }
 }
 
+/** 
+ * Identify correct answer and respond accordingly
+ */
 function chooseAnswer(e) {
     const selectedButton = e.target;
     const isCorrect = selectedButton.dataset.correct === "true";
-    // Creating and element to display an interesting fact linked to the question
+    // Create an element to display an interesting fact linked to the question
     let fact = document.createElement("p");
     fact.classList.add('fact');
     answerOptions.appendChild(fact);
     let currentQuestion = randomQuestions[currentQuestionIndex];
-    // Changing the colour of the button if corect/incorrect to green/red. Adding interesting fact about the landmark
+    // Change the colour of the button if corect/incorrect to green/red. Add interesting fact about the landmark
     if (isCorrect) {
         selectedButton.classList.add('correct-color');
         fact.classList.add('correct-color');
@@ -415,8 +412,8 @@ function chooseAnswer(e) {
     nextButton.style.display = "block";
 }
 
-/**
- * Function to give feedback based on final score
+/** 
+ * Give feedback based on final score
  */
 function giveFeedback() {
     let scorePercentage = Math.floor((score / (randomQuestions.length + 1)) * 100);
@@ -425,18 +422,18 @@ function giveFeedback() {
     feedback.classList.add('feedback-message');
 
     if (scorePercentage >= 50) {
-        feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For more practice play again';
+        feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For new set of 7 randomly selected questions play again';
         feedback.style.color = "darkgreen";
         frame.classList.add('correct-color');
     } else {
-        feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world play again';
+        feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world play again for new set of randomly selected questions';
         feedback.style.color = "darkred";
         frame.classList.add('incorrect-color');
     }
 }
 
 /** 
- * Function to display final score
+ * Display final score
 */
 function displayScore() {
     clearPrevious();
@@ -448,7 +445,7 @@ function displayScore() {
 }
 
 /**
- * Function to define how the Next button work
+ * Define how the Next button work
  */
 function handleNextButton() {
     currentQuestionIndex++;
