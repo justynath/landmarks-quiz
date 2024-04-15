@@ -43,7 +43,7 @@ main {
 
 #landmark-image img{
     width: 100%;
-    height: 400px;
+    height: 200px;
     object-fit: contain;
 }
 
@@ -144,4 +144,6 @@ footer {
     footer {
         flex-direction: row;
     }
+    #landmark-image img{
+        height: 400px;
 }
