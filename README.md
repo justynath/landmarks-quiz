@@ -1,32 +1,54 @@
 # Landmarks Quiz
 
 ## Overview
-
+Landmarks is a quiz featuring questions about the locations, histories, or interesting facts about landmarks around the world. It is designed for anyone who has an interest in landmarks or would like to develop one, allowing them to test their current knowledge and learn more about globally recognized significant features, both man-made and natural wonders.
 ---
+
+[live site](https://justynath.github.io/landmarks-quiz/)
+
 
 ## Planning
 
 ### Aim
+The aim of the quiz is both entertainment and educational. It features a variety of questions about the location, history, and features of landmarks. Additionally, after answering each question, users are introduced to an interesting fact that elaborates on the question.
 
 ### Targeted Audience
+The quiz is designed for anyone interested in famous buildings, statues, and natural wonders that are easily identifiable based on their popularity and distinctive features. It caters to avid travelers as well as those aspiring to travel, along with individuals who enjoy taking quizzes to test their general knowledge.
 
 ### User Stories
+- As a user, I want to understand the purpose of this website quickly and easily.
+- As a user, I want to easily navigate this website.
+- As a user, I want to test my knowledge on landmarks.
+- As a user, I want to know instantly if my answer is correct.
+- As a user, I want to learn more about each question.
+- As a user, I want to know my score (how many correct answers I got).
+- As a user, I want to have an option to take the quiz again.
+- As a user, I want to feel positive about my attempt and encourage to improve my score.
 
 ---
 
 ## UX
 
 ### Strategy
--
+The primary objective of the site is to engage users in an entertaining manner while providing them with the opportunity to test their knowledge of landmarks worldwide. Additionally, the platform encourages users to delve deeper into their understanding by offering opportunities for further exploration and elaboration on their existing knowledge.
+
 
 ### Scope
--
+I want the user to have the opportunity to see the visual representation of the landmark as well as be able to choose and answer from four given options. I want the user to get instant feedback on their answer and access additional information related to the question. I want the user to feel like they are learning by completing the quiz. I want the user to see their final score and feedback on how they are doing including encouragement to try again with randomly selected questions. I want the user to feel positive throughout and after completing the quiz as well as inspired to attempt it again.
 
 ### Structure
--
+The quiz is structured into three main stages:
+
+1. **Welcome page:** Users are greeted with the main title of the quiz, 'Landmarks,' and provided with instructions on how to begin. They can initiate the quiz by clicking a designated button that leads them to the first question.
+2. **Questions:** Each question is accompanied by a corresponding image, the question itself, and four answer options. Upon selecting an option, users receive instant feedback, and additional information about the landmark is provided. Users can proceed to the next question by clicking the 'Next' button.
+3. **Feedback page:** The user's final score is displayed, along with feedback indicating their performance. They are encouraged to retake the quiz by clicking the 'Play again' button.
+
+Each page includes **footer** containing information about the creator of the quiz.
 
 ### Skeleton
--
+The website is designed to be clear and simple, with the main purpose of entertainment and education at the same time. Features are arranged hierarchically to follow the order of importance.
+
+[wireframes]()
 
 ### Surface
 
@@ -36,10 +58,11 @@
 
 ---
 
+
 ## Technologies
 1. HTML - To create the three pages: home, current reading and sign up
 2. CSS - To create a nice, standout front-end and to give a great user experience
-3. JavaScript
+3. JavaScript - To add interactivity for the user, react to user's action and give feedback
 4. Balsamiq - To create a wireframe
 
 ---

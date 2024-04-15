@@ -426,7 +426,7 @@ function giveFeedback() {
         feedback.style.color = "darkgreen";
         frame.classList.add('correct-color');
     } else {
-        feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world play again for new set of randomly selected questions';
+        feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world play again for new set of 7 randomly selected questions';
         feedback.style.color = "darkred";
         frame.classList.add('incorrect-color');
     }
