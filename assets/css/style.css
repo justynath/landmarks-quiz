@@ -114,13 +114,20 @@ main {
 
 /* Footer */
 footer {
-    background-color: #fff4bc;
+    background-color: #fbe790;
     text-align: center;
-    padding: 10px 25px;
+    padding: 10px 30px;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
     flex-wrap: wrap;
+}
+
+footer p {
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #links {
