@@ -36,7 +36,7 @@ The primary objective of the site is to engage users in an entertaining manner w
 
 
 ### Scope
-I want the user to have the opportunity to see the visual representation of the landmark as well as be able to choose and answer from four given options. I want the user to get instant feedback on their answer and access additional information related to the question. I want the user to feel like they are learning by completing the quiz. I want the user to see their final score and feedback on how they are doing including encouragement to try again with ** new randomly selected questions**. I want the user to feel positive throughout and after completing the quiz as well as inspired to attempt it again.
+I want the user to have the opportunity to see the visual representation of the landmark as well as be able to choose and answer from four given options. I want the user to get instant feedback on their answer and access additional information related to the question. I want the user to feel like they are learning by completing the quiz. I want the user to see their final score and feedback on how they are doing including encouragement to try again with **new randomly selected questions**. I want the user to feel positive throughout and after completing the quiz as well as inspired to attempt it again.
 
 ### Structure
 The quiz is structured into three main stages:
@@ -173,17 +173,27 @@ Below is a summary of resolved bugs:
 
 | Bug ID | Bug Description | Status |
 |--------|-----------------|--------|
-| #001   | description | Resolved |
-| #002   | description | Resolved |
-| #003   | description | Resolved |
+| #001   | After adding welcome page, the 'Start Quiz' button not working correctly | Resolved |
+| #002   | The background on feedback page is not changing colour | Resolved |
+| #003   | The background colour not reseting for first question | Resolved |
 
 **Bug Details**
 Here are the details of the resolved bugs:
 
 **Bug #001**
-- **Description**: 
-- **Resolution**: 
-- **Impact**: 
+- **Description**:  After I added the welcome page the 'Start Quiz' button was not working correctly (Jumping to question two, then repeating that question in a loop)
+- **Resolution**: I removed the original event listener and added a new one to correctly respond to the 'Start Quiz' button
+- **Impact**: Including a welcoming page gives more information about the quiz and allows the user to make decision about taking the quiz
+
+**Bug #002**
+- **Description**:  The background of the feedback page was not changing despite assigning a variable and getting element by class name
+- **Resolution**: The element by class name is returned as an array, hence I needed to use indexing to return the first element
+- **Impact**: When the colour of the background changes based on the score it give instant feedback to the user
+
+**Bug #003**
+- **Description**:  After taking the quiz for the second time the background of the first question was not reseting
+- **Resolution**: I included if/else method in the startQuiz function to reset the background
+- **Impact**: The user is reassured that the quiz has restarted and the previous score has been reset
 
 ### Validator Testing 
 
