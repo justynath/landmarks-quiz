@@ -2,7 +2,7 @@
 
 ## Overview
 ---
-Landmarks is a quiz featuring questions about the locations, histories, or interesting facts about landmarks around the world. It is designed for anyone who has an interest in landmarks or would like to develop one, allowing them to test their current knowledge and learn more about globally recognized significant features, both man-made and natural wonders.
+Landmarks is a quiz featuring questions about the locations, history, and interesting facts about landmarks around the world. It is designed for anyone who has an interest in landmarks or would like to develop one, allowing them to test their current knowledge and learn more about globally recognized significant features, both man-made and natural wonders.
 
 [live site](https://justynath.github.io/landmarks-quiz/)
 
@@ -36,14 +36,14 @@ The primary objective of the site is to engage users in an entertaining manner w
 
 
 ### Scope
-I want the user to have the opportunity to see the visual representation of the landmark as well as be able to choose and answer from four given options. I want the user to get instant feedback on their answer and access additional information related to the question. I want the user to feel like they are learning by completing the quiz. I want the user to see their final score and feedback on how they are doing including encouragement to try again with randomly selected questions. I want the user to feel positive throughout and after completing the quiz as well as inspired to attempt it again.
+I want the user to have the opportunity to see the visual representation of the landmark as well as be able to choose and answer from four given options. I want the user to get instant feedback on their answer and access additional information related to the question. I want the user to feel like they are learning by completing the quiz. I want the user to see their final score and feedback on how they are doing including encouragement to try again with ** new randomly selected questions**. I want the user to feel positive throughout and after completing the quiz as well as inspired to attempt it again.
 
 ### Structure
 The quiz is structured into three main stages:
 
 1. **Welcome page:** Users are greeted with the main title of the quiz, 'Landmarks,' and provided with instructions on how to begin. They can initiate the quiz by clicking a designated button that leads them to the first question.
-2. **Questions:** Each question is accompanied by a corresponding image, the question itself, and four answer options. Upon selecting an option, users receive instant feedback, and additional information about the landmark is provided. Users can proceed to the next question by clicking the 'Next' button.
-3. **Feedback page:** The user's final score is displayed, along with feedback indicating their performance. They are encouraged to retake the quiz by clicking the 'Play again' button.
+2. **Questions:** The questions are randomly selected: 7 out of 25 questions in the array. Each question is accompanied by a corresponding image, the question itself, and four answer options. Upon selecting an option, users receive instant feedback, and additional information about the landmark is provided. Users can proceed to the next question by clicking the 'Next' button.
+3. **Feedback page:** The user's final score is displayed, along with feedback indicating their performance. They are encouraged to retake the quiz with new 7 randomly selected questions by clicking the 'Try again' button.
 
 Each page includes **footer** containing information about the creator of the quiz.
 
@@ -102,7 +102,7 @@ The whole quiz is contained within a frame to narrow the focus and eliminate dis
 - If the score is equal to or greater than 50%, the background changes to green, and positive feedback is displayed. 
 ![positive feedback](./assets/readme-resources/positive-feedback.png)
 - If the score is less than 50%, the background changes to red, and constructive feedback is displayed. ![constructive feedback](./assets/readme-resources/constructive-feedback.png)
-- There's a button labeled 'Try Again' that allows users to attempt another set of 7 random questions.
+- There's a button labeled 'Try Again' that allows users to attempt another set of 7 randomly selected questions.
 
 
 ### The Footer

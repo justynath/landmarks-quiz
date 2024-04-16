@@ -51,6 +51,7 @@ main {
 .button {
     background-color: #fefefe;
     color: #0d0e0e;
+    font-size: 0.85em;
     width: 100%;
     border: 1px solid #0d0e0e;
     padding: 10px;
@@ -93,7 +94,7 @@ main {
 .fact {
     color: #0d0e0e;
     line-height: 1.5em;
-    font-size: 85%;
+    font-size: 0.85em;
     width: 100%;
     border: 1px solid #0d0e0e;
     padding: 10px;
