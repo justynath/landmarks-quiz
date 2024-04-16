@@ -12,6 +12,32 @@ Landmarks is a quiz featuring questions about the locations, history, and intere
 1. [**Overview**](#overview) 
 2. [**Planning**](#planning)
     - [**Aim**](#aim)
+    - [**Targeted Audience**](#targeted-audience)
+    - [**User Stories**](#user-stories)
+3. [**UX**](#ux)
+    - [**Strategy**](#strategy)
+    - [**Scope**](#scope)
+    - [**Structure**](#structure)
+    - [**Skeleton**](#skeleton)
+    - [**Surface**](#surface)
+4. [**Technologies**](#technologies)
+5. [**Features**](#features)
+    - [**Welcome Page**](#welcome-page)
+    - [**Question**](#question)
+    - [**Feedback**](#feedback)
+    - [**The footer**](#footer)
+6. [**Testing**](#testing)
+    - [**Features testing**](#features-testing) 
+    - [**Browsers**](#browsers)
+    - [**Lighthouse**](#lighthouse)
+    - [**Bugs Resolved**](#bugs)
+    - [**Validator Testing**](#validator-testing)
+7.  [**Deployment**](#deployment)
+8.  [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Media**](#media)
+    - [**Anknowledgements**](#anknowledgements)
+
 
 
 ## Planning <a name="planning"></a>
@@ -19,10 +45,10 @@ Landmarks is a quiz featuring questions about the locations, history, and intere
 ### Aim <a name="aim"></a>
 The aim of the quiz is both entertainment and educational. It features a variety of questions about the location, history, and features of landmarks. Additionally, after answering each question, users are introduced to an interesting fact that elaborates on the question.
 
-### Targeted Audience
+### Targeted Audience <a name="targeted-audience"></a>
 The quiz is designed for anyone interested in famous buildings, statues, and natural wonders that are easily identifiable based on their popularity and distinctive features. It caters to avid travelers as well as those aspiring to travel, along with individuals who enjoy taking quizzes to test their general knowledge.
 
-### User Stories
+### User Stories <a name="user-stories"></a>
 - As a user, I want to understand the purpose of this website quickly and easily.
 - As a user, I want to easily navigate this website.
 - As a user, I want to test my knowledge on landmarks.
@@ -34,16 +60,16 @@ The quiz is designed for anyone interested in famous buildings, statues, and nat
 
 ---
 
-## UX
+## UX <a name="ux"></a>
 
-### Strategy
+### Strategy <a name="strategy"></a>
 The primary objective of the site is to engage users in an entertaining manner while providing them with the opportunity to test their knowledge of landmarks worldwide. Additionally, the platform encourages users to delve deeper into their understanding by offering opportunities for further exploration and elaboration on their existing knowledge.
 
 
-### Scope
+### Scope <a name="scope"></a>
 I want the user to have the opportunity to see the visual representation of the landmark as well as be able to choose and answer from four given options. I want the user to get instant feedback on their answer and access additional information related to the question. I want the user to feel like they are learning by completing the quiz. I want the user to see their final score and feedback on how they are doing including encouragement to try again with **new randomly selected questions**. I want the user to feel positive throughout and after completing the quiz as well as inspired to attempt it again.
 
-### Structure
+### Structure <a name="structure"></a>
 The quiz is structured into three main stages:
 
 1. **Welcome page:** Users are greeted with the main title of the quiz, 'Landmarks,' and provided with instructions on how to begin. They can initiate the quiz by clicking a designated button that leads them to the first question.
@@ -52,12 +78,12 @@ The quiz is structured into three main stages:
 
 Each page includes **footer** containing information about the creator of the quiz.
 
-### Skeleton
+### Skeleton <a name="skeleton"></a>
 The website is designed to be clear and simple, with the main purpose of entertainment and education at the same time. Features are arranged hierarchically to follow the order of importance.
 
 [wireframes](./assets/readme-resources/landmarks.pdf)
 
-### Surface
+### Surface <a name="surface"></a>
 
 #### Colour Palette
 
@@ -74,7 +100,7 @@ The images used in this quiz represent the landmarks, aiding recognition through
 ---
 
 
-## Technologies
+## Technologies <a name="technologies"></a>
 1. HTML - To create the three pages: home, current reading and sign up
 2. CSS - To create a nice, standout front-end and to give a great user experience
 3. JavaScript - To add interactivity for the user, react to user's action and give feedback
@@ -82,13 +108,13 @@ The images used in this quiz represent the landmarks, aiding recognition through
 
 ---
 
-## Features 
+## Features <a name="features"></a>
 
-### Welcome Page
+### Welcome Page <a name="welcome-page"></a>
 The whole quiz is contained within a frame to narrow the focus and eliminate distractions from other elements. It includes the title, a welcoming message, and the 'Start Quiz' button.
 ![welcome page](./assets/readme-resources/welcome-page.png)
 
-### Question
+### Question <a name="question"></a>
 - A question is displayed with an image, the question itself, and four answer option buttons. The buttons change background color when hovered over. 
 **The questions are randomly selected each time the user takes the quiz (7 questions out of 25).**
 ![question](./assets/readme-resources/first-question.png)
@@ -100,7 +126,7 @@ The whole quiz is contained within a frame to narrow the focus and eliminate dis
 ![correct answer](./assets/readme-resources/incorrect-answer.png)
 
 
-### Feedback.
+### Feedback <a name="feedback"></a>
 - The score is displayed as the number of correct answers out of the total number of questions answered.
 - If the score is equal to or greater than 50%, the background changes to green, and positive feedback is displayed. 
 ![positive feedback](./assets/readme-resources/positive-feedback.png)
@@ -108,14 +134,14 @@ The whole quiz is contained within a frame to narrow the focus and eliminate dis
 - There's a button labeled 'Try Again' that allows users to attempt another set of 7 randomly selected questions.
 
 
-### The Footer
+### The Footer <a name="footer"></a>
 The footer contains information about the author of the page and the links to the Github repository and the LinkedIn profile.
 *Footer*
 ![footer](./assets/readme-resources/footer.png)
 *Footer on mobile*
 ![footer on mobile](./assets/readme-resources/footer-mobile.png)
 
-## Future Features
+## Future Features <a name="future-features"></a>
 While the current version of the project is fully functional, I have some exciting features planned for future updates. Here are a few ideas that I didn't have time to implement in this release:
 
 - Implementing user accounts to keep a record of their scores.
@@ -123,9 +149,9 @@ While the current version of the project is fully functional, I have some exciti
 
 ---
 
-## Testing
+## Testing <a name="testing"></a>
 
-### Features Testing
+### Features Testing <a name="features-testing"></a>
 
 |  Feature |  Action | Effect |
 |---|---|---|
@@ -135,7 +161,7 @@ While the current version of the project is fully functional, I have some exciti
 |Github link in the footer|Click|Opens the github repository in new tab|
 |Linkedin link in the footer|Click|Opens the Linkedin profile in new tab|
 
-### Browsers 
+### Browsers <a name="browsers"></a>
 
 **Supported Browsers and Devices**
 My web application is tested and supported on the following browsers and devices:
@@ -154,7 +180,7 @@ I conduct manual responsiveness testing on Chrome and Safari to ensure a seamles
 | Tablet (iPad)       | no issues | no issues |
 | Mobile (iPhone 12pro)   | no issues | no issues |
 
-### Lighthouse
+### Lighthouse <a name="lighthouse"></a>
 
 **Introduction**
 This report presents the results of Lighthouse testing conducted to assess the performance, accessibility, best practices, SEO, and PWA compliance of Landmarks.
@@ -166,7 +192,7 @@ Lighthouse tests were executed using the Google Chrome browser's DevTools.
 
 ![lighthouse](./assets/readme-resources/lighthouse.png)
 
-### Bugs Resolved
+### Bugs Resolved <a name="bugs"></a>
 
 **Introduction**
 This section provides a summary of bugs that have been identified, reported, and subsequently resolved in Landmarks.
@@ -198,7 +224,7 @@ Here are the details of the resolved bugs:
 - **Resolution**: I included if/else method in the startQuiz function to reset the background
 - **Impact**: The user is reassured that the quiz has restarted and the previous score has been reset
 
-### Validator Testing 
+### Validator Testing <a name="validator-testing"></a>
 
 **HTML**
 Code has been validated with the official W3C validator and returned no errors or warnings.
@@ -225,7 +251,7 @@ The most complex function has a cyclomatic complexity value of 3 while the media
 
 ---
 
-## Deployment
+## Deployment <a name="deployment"></a>
 
 - The site was deployed to GitHub pages. The steps to deploy were as follow: 
   - In the GitHub repository I navigated to the Settings tab 
@@ -236,9 +262,9 @@ The live link can be found here - [live site](https://justynath.github.io/landma
 
 ---
 
-## Credits 
+## Credits  <a name="credits"></a>
 
-### Content
+### Content <a name="content"></a>
 - The fonts were imported from [Google Fonts](https://fonts.google.com/)
 - The icons used were taken from [Font Awesome](https://fontawesome.com/)
 - The colour scheme was inspired by this [article](https://muffingroup.com/blog/calm-color-palette/)
@@ -247,9 +273,9 @@ The live link can be found here - [live site](https://justynath.github.io/landma
 - I used this article and my mentor's support for creating the shuffle function [article](https://medium.com/@omar.rashid2/fisher-yates-shuffle-a2aa15578d2f)
 
 
-### Media
+### Media <a name="media"></a>
 - I used images from this website [images](https://www.jetpunk.com/quizzes/landmarks-quiz-1)
 
-### Anknowledgements
+### Anknowledgements <a name="anknowledgements"></a>
 - Medale Oluwafemi, my mentor at Code Institute for his guidance and invaluable support with this project
 - Tutor support at Code Institute for assisting me with solving problems and fixing bugs and errors
