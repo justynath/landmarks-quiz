@@ -1,6 +1,6 @@
 # Landmarks Quiz
 
-## Overview
+## Overview <a name="overview"></a>
 ---
 Landmarks is a quiz featuring questions about the locations, history, and interesting facts about landmarks around the world. It is designed for anyone who has an interest in landmarks or would like to develop one, allowing them to test their current knowledge and learn more about globally recognized significant features, both man-made and natural wonders.
 
@@ -8,10 +8,15 @@ Landmarks is a quiz featuring questions about the locations, history, and intere
 
 ![Am I Responsive](./assets/readme-resources/am-i-responsive.png)
 
+## Table of Contents
+1. [**Overview**](#overview) 
+2. [**Planning**](#planning)
+    - [**Aim**](#aim)
 
-## Planning
 
-### Aim
+## Planning <a name="planning"></a>
+
+### Aim <a name="aim"></a>
 The aim of the quiz is both entertainment and educational. It features a variety of questions about the location, history, and features of landmarks. Additionally, after answering each question, users are introduced to an interesting fact that elaborates on the question.
 
 ### Targeted Audience
