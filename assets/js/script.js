@@ -282,7 +282,6 @@ const questionElement = document.getElementById("question");
 const answerOptions = document.getElementById("answer-options");
 const nextButton = document.getElementById("next-button");
 const frame = document.getElementsByClassName("frame")[0];
-const quizElement = document.getElementsByClassName("quiz")[0];
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -332,18 +331,18 @@ function startQuiz() {
         frame.classList.remove('correct-color');
     } else {
         frame.classList.remove('incorrect-color');
-    };
+    }
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = 'Next';
     nextButton.removeEventListener('click', startQuiz);
     nextButton.addEventListener('click', handleNextButton);
-    setCurrentQuestions()
+    setCurrentQuestions();
     displayQuestion();
 }
 
 function setCurrentQuestions() {
-    randomQuestions = getRandomQuestions(questions, 7)
+    randomQuestions = getRandomQuestions(questions, 7);
 }
 
 /** Display a question: 

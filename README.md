@@ -161,7 +161,7 @@ Lighthouse tests were executed using the Google Chrome browser's DevTools.
 
 **Test Metrics**
 
-
+![lighthouse][.assets/readme-resources/lighthouse.png]
 
 ### Bugs Resolved
 
@@ -188,12 +188,27 @@ Here are the details of the resolved bugs:
 ### Validator Testing 
 
 **HTML**
-Code has been validated with the official W3C validator.
+Code has been validated with the official W3C validator and returned no errors or warnings.
 
-index.html
+![html validator][.assets/readme-resources/validator-html.png]
 
 **CSS**
-Code has been validated with the official (Jigsaw) validator
+Code has been validated with the official (Jigsaw) validator and returned no errors or warnings.
+
+![css validator][.assets/readme-resources/validator-css.png]
+
+**JavaScript**
+Code has been validated with the official (Jshint) validator and returned no errors or warnings.
+
+**Metrics**
+
+There are 13 functions in this file.
+
+Function with the largest signature take 2 arguments, while the median is 0.
+
+Largest function has 16 statements in it, while the median is 6.
+
+The most complex function has a cyclomatic complexity value of 3 while the median is 2.
 
 ---
 
@@ -216,3 +231,6 @@ The live link can be found here - [live site](https://justynath.github.io/landma
 
 ### Anknowledgements
 
+
+
+[assets/readme-resources/lighthouse.png]: .assets/readme-resources/lighthouse.png
