@@ -227,16 +227,19 @@ Here are the details of the resolved bugs:
 ### Validator Testing <a name="validator-testing"></a>
 
 **HTML**
+
 Code has been validated with the official W3C validator and returned no errors or warnings.
 
 ![html validator](./assets/readme-resources/validator-html.png)
 
 **CSS**
+
 Code has been validated with the official (Jigsaw) validator and returned no errors or warnings.
 
 ![css validator](./assets/readme-resources/validator-css.png)
 
 **JavaScript**
+
 Code has been validated with the official (Jshint) validator and returned no errors or warnings.
 
 *Metrics*
