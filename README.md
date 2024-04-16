@@ -6,7 +6,7 @@ Landmarks is a quiz featuring questions about the locations, histories, or inter
 
 [live site](https://justynath.github.io/landmarks-quiz/)
 
-![Am I Responsive](.assets/readme-resources/am-i-responsive.png)
+![Am I Responsive](./assets/readme-resources/am-i-responsive.png)
 
 
 ## Planning
@@ -50,7 +50,7 @@ Each page includes **footer** containing information about the creator of the qu
 ### Skeleton
 The website is designed to be clear and simple, with the main purpose of entertainment and education at the same time. Features are arranged hierarchically to follow the order of importance.
 
-[wireframes](.assets/readme-resources/landmarks.pdf)
+[wireframes](./assets/readme-resources/landmarks.pdf)
 
 ### Surface
 
@@ -58,11 +58,11 @@ The website is designed to be clear and simple, with the main purpose of enterta
 
 I used this color palette as the base for a clean and aesthetic look.
 
-![base colour palette](.assets/readme-resources/colour-palette.png)
+![base colour palette](./assets/readme-resources/colour-palette.png)
 
 The base colours have been complemented with these softer, more pastel colours for displaying correct answers and the footer. The aim was for positive user experience by avoiding rich, 'shouting' colours.
 
-![pastel colours](.assets/readme-resources/colour-pastel.png)
+![pastel colours](./assets/readme-resources/colour-pastel.png)
 
 #### Images
 The images used in this quiz represent the landmarks, aiding recognition through visual cues.
@@ -82,35 +82,35 @@ The images used in this quiz represent the landmarks, aiding recognition through
 
 ### Welcome Page
 The whole quiz is contained within a frame to narrow the focus and eliminate distractions from other elements. It includes the title, a welcoming message, and the 'Start Quiz' button.
-![welcome page](assets/readme-resources/welcome-page.png)
+![welcome page](./assets/readme-resources/welcome-page.png)
 
 ### Question
 - A question is displayed with an image, the question itself, and four answer option buttons. The buttons change background color when hovered over. 
 **The questions are randomly selected each time the user takes the quiz (7 questions out of 25).**
 
-![question](.assets/readme-resources/first-question.png)
+![question](./assets/readme-resources/first-question.png)
 
 - If the answer is correct, the background of the selected button changes to green, and nn additional element with green background and an interesting fact appears.
-![correct answer](assets/readme-resources/correct-answer.png)
+![correct answer](./assets/readme-resources/correct-answer.png)
 
 - If the answer is incorrect, the background of the selected button changes to red, while the background of the button with the correct answer changes to green. An additional element with red background and an interesting fact appears.
-![correct answer](assets/readme-resources/incorrect-answer.png)
+![correct answer](./assets/readme-resources/incorrect-answer.png)
 
 
 ### Feedback.
 - The score is displayed as the number of correct answers out of the total number of questions answered.
 - If the score is equal to or greater than 50%, the background changes to green, and positive feedback is displayed. 
-![positive feedback](assets/readme-resources/positive-feedback.png)
-- If the score is less than 50%, the background changes to red, and constructive feedback is displayed. ![constructive feedback](assets/readme-resources/constructive-feedback.png)
+![positive feedback](./assets/readme-resources/positive-feedback.png)
+- If the score is less than 50%, the background changes to red, and constructive feedback is displayed. ![constructive feedback](./assets/readme-resources/constructive-feedback.png)
 - There's a button labeled 'Try Again' that allows users to attempt another set of 7 random questions.
 
 
 ### The Footer
 The footer contains information about the author of the page and the links to the Github repository and the LinkedIn profile.
 *Footer*
-![footer](assets/readme-resources/footer.png)
+![footer](./assets/readme-resources/footer.png)
 *Footer on mobile*
-![footer on mobile](assets/readme-resources/footer-mobile.png)
+![footer on mobile](./assets/readme-resources/footer-mobile.png)
 
 ## Future Features
 While the current version of the project is fully functional, I have some exciting features planned for future updates. Here are a few ideas that I didn't have time to implement in this release:
@@ -161,7 +161,7 @@ Lighthouse tests were executed using the Google Chrome browser's DevTools.
 
 **Test Metrics**
 
-![lighthouse](.assets/readme-resources/lighthouse.png)
+![lighthouse](./assets/readme-resources/lighthouse.png)
 
 ### Bugs Resolved
 
@@ -190,12 +190,12 @@ Here are the details of the resolved bugs:
 **HTML**
 Code has been validated with the official W3C validator and returned no errors or warnings.
 
-![html validator](.assets/readme-resources/validator-html.png)
+![html validator](./assets/readme-resources/validator-html.png)
 
 **CSS**
 Code has been validated with the official (Jigsaw) validator and returned no errors or warnings.
 
-![css validator](.assets/readme-resources/validator-css.png)
+![css validator](./assets/readme-resources/validator-css.png)
 
 **JavaScript**
 Code has been validated with the official (Jshint) validator and returned no errors or warnings.
@@ -225,8 +225,18 @@ The live link can be found here - [live site](https://justynath.github.io/landma
 
 ## Credits 
 
-### Content 
+### Content
+- The fonts were imported from [Google Fonts](https://fonts.google.com/)
+- The icons used were taken from [Font Awesome](https://fontawesome.com/)
+- The colour scheme was inspired by this [article](https://muffingroup.com/blog/calm-color-palette/)
+- I used this video tutiorial to set the structure of my quiz [JavaScript Quiz Tutorial](https://www.youtube.com/watch?v=PBcqGxrr9g8)
+- I used chatGTP to reaserch information about the landmarks. The text content was written by me and enhanced by ChatGTP
+- I used this article and my mentor's support for creating the shuffle function [article](https://medium.com/@omar.rashid2/fisher-yates-shuffle-a2aa15578d2f)
+
 
 ### Media
+- I used images from this website [images](https://www.jetpunk.com/quizzes/landmarks-quiz-1)
 
 ### Anknowledgements
+- Medale Oluwafemi, my mentor at Code Institute for his guidance and invaluable support with this project
+- Tutor support at Code Institute for assisting me with solving problems and fixing bugs and errors
