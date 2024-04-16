@@ -61,7 +61,6 @@ I used this color palette as the base for a clean and aesthetic look.
 ![base colour palette](./assets/readme-resources/colour-palette.png)
 
 The base colours have been complemented with these softer, more pastel colours for displaying correct answers and the footer. The aim was for positive user experience by avoiding rich, 'shouting' colours.
-
 ![pastel colours](./assets/readme-resources/colour-pastel.png)
 
 #### Images
@@ -87,7 +86,6 @@ The whole quiz is contained within a frame to narrow the focus and eliminate dis
 ### Question
 - A question is displayed with an image, the question itself, and four answer option buttons. The buttons change background color when hovered over. 
 **The questions are randomly selected each time the user takes the quiz (7 questions out of 25).**
-
 ![question](./assets/readme-resources/first-question.png)
 
 - If the answer is correct, the background of the selected button changes to green, and nn additional element with green background and an interesting fact appears.
