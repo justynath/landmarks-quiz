@@ -34,7 +34,7 @@ const questions = [
     },
     {
         image: "assets/images/dome-of-the-rock.png",
-        question: "In what country is this building located?",
+        question: "In which country is this building located?",
         answers: [
             { text: "Israel", correct: false},
             { text: "Greece", correct: false},
@@ -78,7 +78,7 @@ const questions = [
     },
     {
         image: "assets/images/golden-gate-bridge.png",
-        question: "In what country is this bridge located?",
+        question: "In which country is this bridge located?",
         answers: [
             { text: "United States", correct: true},
             { text: "China", correct: false},
@@ -111,7 +111,7 @@ const questions = [
     },
     {
         image: "assets/images/machu-picchu.png",
-        question: "In what country is this landmark located?",
+        question: "In which country is this landmark located?",
         answers: [
             { text: "Mexico", correct: false},
             { text: "Thailand", correct: false},
@@ -133,7 +133,7 @@ const questions = [
     },
     {
         image: "assets/images/notre-dame.png",
-        question: "What is this building called called?",
+        question: "What is this building called?",
         answers: [
             { text: "Notre Dame Cathedral", correct: true},
             { text: "Westminster Abbey", correct: false},
@@ -155,7 +155,7 @@ const questions = [
     },
     {
         image: "assets/images/stonehenge.png",
-        question: "In what country is this landmark located?",
+        question: "In which country is this landmark located?",
         answers: [
             { text: "England", correct: true},
             { text: "Scotland", correct: false},
@@ -177,7 +177,7 @@ const questions = [
     },
     {
         image: "assets/images/taj-mahal.png",
-        question: "In what country is this landmark located?",
+        question: "In which country is this landmark located?",
         answers: [
             { text: "Thailand", correct: false},
             { text: "Japan", correct: false},
@@ -199,7 +199,7 @@ const questions = [
     },
     {
         image: "assets/images/the-grand-canyon.png",
-        question: "In what state in the USA is this nature wonder located?",
+        question: "In which state in the USA is this nature wonder located?",
         answers: [
             { text: "Utah", correct: false},
             { text: "Nevada", correct: false},
@@ -221,7 +221,7 @@ const questions = [
     },
     {
         image: "assets/images/the-little-mermaid.png",
-        question: "In what country is this statue located?",
+        question: "In which country is this statue located?",
         answers: [
             { text: "Denmark", correct: true},
             { text: "Germany", correct: false},
