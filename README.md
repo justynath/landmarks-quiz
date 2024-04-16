@@ -161,7 +161,7 @@ Lighthouse tests were executed using the Google Chrome browser's DevTools.
 
 **Test Metrics**
 
-![lighthouse][.assets/readme-resources/lighthouse.png]
+![lighthouse](.assets/readme-resources/lighthouse.png)
 
 ### Bugs Resolved
 
@@ -190,17 +190,17 @@ Here are the details of the resolved bugs:
 **HTML**
 Code has been validated with the official W3C validator and returned no errors or warnings.
 
-![html validator][.assets/readme-resources/validator-html.png]
+![html validator](.assets/readme-resources/validator-html.png)
 
 **CSS**
 Code has been validated with the official (Jigsaw) validator and returned no errors or warnings.
 
-![css validator][.assets/readme-resources/validator-css.png]
+![css validator](.assets/readme-resources/validator-css.png)
 
 **JavaScript**
 Code has been validated with the official (Jshint) validator and returned no errors or warnings.
 
-**Metrics**
+*Metrics*
 
 There are 13 functions in this file.
 
@@ -230,7 +230,3 @@ The live link can be found here - [live site](https://justynath.github.io/landma
 ### Media
 
 ### Anknowledgements
-
-
-
-[assets/readme-resources/lighthouse.png]: .assets/readme-resources/lighthouse.png
