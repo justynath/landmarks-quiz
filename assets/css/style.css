@@ -34,6 +34,8 @@ main {
     padding: 10px 15px;
     border: 2px solid #0d0e0e;
     border-radius: 10px;
+    /* display: flex; */
+    /* flex-direction: column; */
 }
 
 .frame h1 {
@@ -167,7 +169,7 @@ footer p {
 @media screen and (min-width: 768px) {
     .frame {
         margin: 35px 25%;
-        max-width: 800px;
+        max-width: 700px;
     }
 
     footer {

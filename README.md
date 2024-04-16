@@ -25,6 +25,7 @@ Landmarks is a quiz featuring questions about the locations, history, and intere
     - [**Welcome Page**](#welcome-page)
     - [**Question**](#question)
     - [**Feedback**](#feedback)
+    - [**Quit Quiz Button**](#quit-button)
     - [**The footer**](#footer)
 6. [**Testing**](#testing)
     - [**Features testing**](#features-testing) 
@@ -133,11 +134,17 @@ The whole quiz is contained within a frame to narrow the focus and eliminate dis
 - If the score is less than 50%, the background changes to red, and constructive feedback is displayed. ![constructive feedback](./assets/readme-resources/constructive-feedback.png)
 - There's a button labeled 'Try Again' that allows users to attempt another set of 7 randomly selected questions.
 
+### Quit Quiz Button <a name="quit-button"></a>
+There is a 'Quit Quiz' button on every page, enhancing user experince by enabaling easy navigation. This takes the user to welcome page.
+
+![quit button](./assets/readme-resources/quit-button.png)
 
 ### The Footer <a name="footer"></a>
 The footer contains information about the author of the page and the links to the Github repository and the LinkedIn profile.
+
 *Footer*
 ![footer](./assets/readme-resources/footer.png)
+
 *Footer on mobile*
 ![footer on mobile](./assets/readme-resources/footer-mobile.png)
 
