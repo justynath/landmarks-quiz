@@ -8,6 +8,7 @@ Landmarks is a quiz featuring questions about the locations, histories, or inter
 
 ![Am I Responsive](.assets/readme-resources/am-i-responsive.png)
 
+
 ## Planning
 
 ### Aim
@@ -86,18 +87,20 @@ The whole quiz is contained within a frame to narrow the focus and eliminate dis
 ### Question
 - A question is displayed with an image, the question itself, and four answer option buttons. The buttons change background color when hovered over. 
 **The questions are randomly selected each time the user takes the quiz (7 questions out of 25).**
+
 ![question](.assets/readme-resources/first-question.png)
 
-- If the answer is correct, the background of the selected button changes to green, and an additional element with a green background and additional information appears.
+- If the answer is correct, the background of the selected button changes to green, and nn additional element with green background and an interesting fact appears.
 ![correct answer](assets/readme-resources/correct-answer.png)
 
-- If the answer is incorrect, the background of the selected button changes to red, while the background of the button with the correct answer changes to green. Additionally, an additional element with a red background and additional information appears.
+- If the answer is incorrect, the background of the selected button changes to red, while the background of the button with the correct answer changes to green. An additional element with red background and an interesting fact appears.
 ![correct answer](assets/readme-resources/incorrect-answer.png)
 
 
 ### Feedback.
 - The score is displayed as the number of correct answers out of the total number of questions answered.
-- If the score is equal to or greater than 50%, the background changes to green, and positive feedback is displayed. ![positive feedback](assets/readme-resources/positive-feedback.png)
+- If the score is equal to or greater than 50%, the background changes to green, and positive feedback is displayed. 
+![positive feedback](assets/readme-resources/positive-feedback.png)
 - If the score is less than 50%, the background changes to red, and constructive feedback is displayed. ![constructive feedback](assets/readme-resources/constructive-feedback.png)
 - There's a button labeled 'Try Again' that allows users to attempt another set of 7 random questions.
 
@@ -123,8 +126,11 @@ While the current version of the project is fully functional, I have some exciti
 
 |  Feature |  Action | Effect |
 |---|---|---|
-|Logo|Click|Brings back to Home page|
-||||
+|Start Quiz button|Click|Displays the first question|
+|Next button|Click|Displays the next question|
+|Try Again button|Click|Starts the quiz and displays the first question|
+|Github link in the footer|Click|Opens the github repository in new tab|
+|Linkedin link in the footer|Click|Opens the Linkedin profile in new tab|
 
 ### Browsers 
 
@@ -143,9 +149,7 @@ I conduct manual responsiveness testing on Chrome and Safari to ensure a seamles
 | Desktop (2560x1440) | no issues | no issues |
 | Laptop (1366x768)   | no issues | no issues |
 | Tablet (iPad)       | no issues | no issues |
-| Mobile (iPhone 12pro)   | no issues | as Chrome |
-
-**Known Issues**
+| Mobile (iPhone 12pro)   | no issues | no issues |
 
 ### Lighthouse
 
@@ -157,11 +161,7 @@ Lighthouse tests were executed using the Google Chrome browser's DevTools.
 
 **Test Metrics**
 
-#### index.html
 
-#### current-reading.html
-
-#### signup.html
 
 ### Bugs Resolved
 
@@ -203,6 +203,8 @@ Code has been validated with the official (Jigsaw) validator
   - In the GitHub repository I navigated to the Settings tab 
   - From the source section drop-down menu, I selected the Main Branch
   - Once the main branch was selected, the page automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
+The live link can be found here - [live site](https://justynath.github.io/landmarks-quiz/)
 
 ---
 
