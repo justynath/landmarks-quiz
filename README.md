@@ -56,11 +56,11 @@ The website is designed to be clear and simple, with the main purpose of enterta
 
 I uesed this as base colour palette for clean and esthetic look.
 
-![base colour palette](assets/readme resources/colour palette.png)
+![base colour palette](assets/readme resources/colour-palette.png)
 
 The base colours have been complemented with these softer, more pastel colours for displaying correct answers and the footer. The aim was for positive user experience by avoiding rich, 'shouting' colours.
 
-![pastel colours](assets/readme resources/colour pastel.png)
+![pastel colours](assets/readme resources/colour-pastel.png)
 
 #### Images
 The images used for this quiz are to represent the landmark and so it is recognised from the visual representation.

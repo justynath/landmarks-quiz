@@ -422,11 +422,11 @@ function giveFeedback() {
     feedback.classList.add('feedback-message');
 
     if (scorePercentage >= 50) {
-        feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For new set of 7 randomly selected questions play again';
+        feedback.innerHTML = 'Impressive knowledge on landmarks around the world! <br> For new set of 7 randomly selected questions try again';
         feedback.style.color = "darkgreen";
         frame.classList.add('correct-color');
     } else {
-        feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world play again for new set of 7 randomly selected questions';
+        feedback.innerHTML = 'Good try! <br> To learn more about the landmaks around the world try again for new set of 7 randomly selected questions';
         feedback.style.color = "darkred";
         frame.classList.add('incorrect-color');
     }
@@ -440,7 +440,7 @@ function displayScore() {
     questionElement.innerHTML = `Your score is ${score} out of ${randomQuestions.length}`;
     imageElement.innerHTML = "";
     giveFeedback();
-    nextButton.innerHTML = 'Play Again';
+    nextButton.innerHTML = 'Try Again';
     nextButton.style.display = 'block';
 }
 
