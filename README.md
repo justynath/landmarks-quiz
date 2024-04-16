@@ -5,7 +5,8 @@
 Landmarks is a quiz featuring questions about the locations, histories, or interesting facts about landmarks around the world. It is designed for anyone who has an interest in landmarks or would like to develop one, allowing them to test their current knowledge and learn more about globally recognized significant features, both man-made and natural wonders.
 
 [live site](https://justynath.github.io/landmarks-quiz/)
-![Am I Responsive](assets/readme resources/am-i-responsive.png)
+
+![Am I Responsive](.assets/readme-resources/am-i-responsive.png)
 
 ## Planning
 
@@ -48,7 +49,7 @@ Each page includes **footer** containing information about the creator of the qu
 ### Skeleton
 The website is designed to be clear and simple, with the main purpose of entertainment and education at the same time. Features are arranged hierarchically to follow the order of importance.
 
-[wireframes](assets/readme resources/landmarks.pdf)
+[wireframes](.assets/readme-resources/landmarks.pdf)
 
 ### Surface
 
@@ -56,11 +57,11 @@ The website is designed to be clear and simple, with the main purpose of enterta
 
 I used this color palette as the base for a clean and aesthetic look.
 
-![base colour palette](assets/readme resources/colour-palette.png)
+![base colour palette](.assets/readme-resources/colour-palette.png)
 
 The base colours have been complemented with these softer, more pastel colours for displaying correct answers and the footer. The aim was for positive user experience by avoiding rich, 'shouting' colours.
 
-![pastel colours](assets/readme resources/colour-pastel.png)
+![pastel colours](.assets/readme-resources/colour-pastel.png)
 
 #### Images
 The images used in this quiz represent the landmarks, aiding recognition through visual cues.
@@ -80,34 +81,33 @@ The images used in this quiz represent the landmarks, aiding recognition through
 
 ### Welcome Page
 The whole quiz is contained within a frame to narrow the focus and eliminate distractions from other elements. It includes the title, a welcoming message, and the 'Start Quiz' button.
-![welcome page](assets/readme resources/welcome-page.png)
+![welcome page](assets/readme-resources/welcome-page.png)
 
 ### Question
 - A question is displayed with an image, the question itself, and four answer option buttons. The buttons change background color when hovered over. 
 **The questions are randomly selected each time the user takes the quiz (7 questions out of 25).**
-![question](assets/readme resources/first-question.png)
+![question](.assets/readme-resources/first-question.png)
 
 - If the answer is correct, the background of the selected button changes to green, and an additional element with a green background and additional information appears.
-![correct answer](assets/readme resources/correct-answer.png)
+![correct answer](assets/readme-resources/correct-answer.png)
 
 - If the answer is incorrect, the background of the selected button changes to red, while the background of the button with the correct answer changes to green. Additionally, an additional element with a red background and additional information appears.
-![correct answer](assets/readme resources/incorrect-answer.png)
+![correct answer](assets/readme-resources/incorrect-answer.png)
 
 
 ### Feedback.
 - The score is displayed as the number of correct answers out of the total number of questions answered.
-- If the score is equal to or greater than 50%, the background changes to green, and positive feedback is displayed. ![positive feedback](assets/readme resources/positive-feedback.png)
-- If the score is less than 50%, the background changes to red, and constructive feedback is displayed. ![constructive feedback](assets/readme resources/constructive-feedback.png)
+- If the score is equal to or greater than 50%, the background changes to green, and positive feedback is displayed. ![positive feedback](assets/readme-resources/positive-feedback.png)
+- If the score is less than 50%, the background changes to red, and constructive feedback is displayed. ![constructive feedback](assets/readme-resources/constructive-feedback.png)
 - There's a button labeled 'Try Again' that allows users to attempt another set of 7 random questions.
 
 
 ### The Footer
 The footer contains information about the author of the page and the links to the Github repository and the LinkedIn profile.
 *Footer*
-![footer](assets/readme resources/footer.png)
+![footer](assets/readme-resources/footer.png)
 *Footer on mobile*
-![footer on mobile](assets/readme resources/footer-mobile.png)
----
+![footer on mobile](assets/readme-resources/footer-mobile.png)
 
 ## Future Features
 While the current version of the project is fully functional, I have some exciting features planned for future updates. Here are a few ideas that I didn't have time to implement in this release:
