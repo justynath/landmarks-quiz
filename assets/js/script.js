@@ -282,6 +282,7 @@ const questionElement = document.getElementById("question");
 const answerOptions = document.getElementById("answer-options");
 const nextButton = document.getElementById("next-button");
 const frame = document.getElementsByClassName("frame")[0];
+const quitButton = document.getElementById("quit-button");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -291,6 +292,12 @@ let randomQuestions = [];
  * Show the welcome page
  */
 function welcome() {
+    // Reset the colour of the background
+    if (frame.classList.contains("correct-color")) {
+        frame.classList.remove('correct-color');
+    } else {
+        frame.classList.remove('incorrect-color');
+    }
     clearPrevious();
     let welcomeMessage = document.getElementById('question');
     welcomeMessage.innerHTML = 'Test your knowlegde on landmarks around the world';
@@ -298,6 +305,7 @@ function welcome() {
     nextButton.style.display = "block";
     nextButton.innerHTML = 'Start Quiz';
     nextButton.addEventListener('click', startQuiz);
+    quitButton.style.display = "none";
 }
 
 /** Randomly select a question from the array
@@ -326,7 +334,7 @@ function getRandomQuestions(allQuestions, numQuestions = 5) {
  * Start the quiz
  */
 function startQuiz() {
-    // Resets the colour of the background
+    // Reset the colour of the background
     if (frame.classList.contains("correct-color")) {
         frame.classList.remove('correct-color');
     } else {
@@ -368,6 +376,9 @@ function displayQuestion() {
         }
         newButton.addEventListener('click', chooseAnswer);
     });
+    // Display the quit quiz button
+    quitButton.style.display = "block";
+    quitButton.addEventListener('click', welcome);
 }
 
 /**
