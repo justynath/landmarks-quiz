@@ -24,18 +24,15 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
 }
 
 /* Frame containing the quiz */
 .frame {
     background-color: #fefefe;
-    margin: 15px;
+    margin: 15px 20px;
     padding: 10px 15px;
     border: 2px solid #0d0e0e;
     border-radius: 10px;
-    /* display: flex; */
-    /* flex-direction: column; */
 }
 
 .frame h1 {
@@ -60,7 +57,7 @@ main {
     font-size: 0.85em;
     width: 100%;
     border: 1px solid #0d0e0e;
-    padding: 10px;
+    padding: 7px;
     margin: 2px 0;
     text-align: left;
     border-radius: 4px;
@@ -161,16 +158,17 @@ footer p {
 /* Media query: tablet vertical view (479px and up) */
 @media screen and (min-width: 479px) {
     .frame {
-        margin: 25px 15%;
+        margin: 25px auto;
+        width: 400px;
     }
 }
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-    .frame {
-        margin: 35px 25%;
-        max-width: 700px;
-    }
+    .frame {  
+        margin: 35px auto; 
+        width: 600px; 
+    } 
 
     footer {
         flex-direction: row;
