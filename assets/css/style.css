@@ -54,10 +54,9 @@ main {
 .button {
     background-color: #fefefe;
     color: #0d0e0e;
-    font-size: 0.85em;
     width: 100%;
     border: 1px solid #0d0e0e;
-    padding: 7px;
+    padding: 8px;
     margin: 2px 0;
     text-align: left;
     border-radius: 4px;
@@ -155,26 +154,27 @@ footer p {
     padding: 10px 15px 0;
 }
 
-/* Media query: tablet vertical view (479px and up) */
+/* Media query: small tablet vertical and mobile horisontal view (479px and up) */
 @media screen and (min-width: 479px) {
     .frame {
         margin: 25px auto;
         width: 400px;
     }
-}
-
-/* Media query: tablets and larger (768px and up) */
-@media screen and (min-width: 768px) {
-    .frame {  
-        margin: 35px auto; 
-        width: 600px; 
-    } 
-
     footer {
         flex-direction: row;
     }
+}
 
-    #landmark-image img {
-        height: 400px;
+/* Media query: tablet vertical view (768px and up) */
+@media screen and (min-width: 768px) {
+    .frame {
+        width: 500px;
     }
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 1025px) {
+    .frame {  
+        width: 600px; 
+    } 
 }
